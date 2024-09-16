@@ -1,0 +1,3 @@
+SELECT * FROM Bloco;
+
+SELECT * FROM Cargo;

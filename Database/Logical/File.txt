@@ -1,0 +1,71 @@
+Cargo (
+
+    id,
+    descricao
+
+);
+
+Bloco (
+
+    id,
+    descricao,
+    observacoes
+
+);
+
+Usuario (
+
+    id,
+    nome,
+    ra,
+    email,
+    senha,
+    administrador,
+
+    fk_cargo -> Cargo
+
+);
+
+Sala (
+
+    id,
+    nome,
+    numero,
+    observacoes,
+
+    fk_bloco -> Bloco
+
+);
+
+Equipamento (
+
+    id,
+    descricao,
+    obervacoes
+
+);
+
+Sala_Equipamento_Assoc (
+
+    quantidade,
+
+    fk_sala -> Sala,
+    fk_equipamento -> Equipamento
+
+);
+
+Agendamento (
+
+    id,
+    data_requisicao,
+    hora_requisicao,
+    data_utilizacao,
+    hora_inicio_utilizacao,
+    hora_fim_utilizacao,
+    situacao
+
+    fk_sala -> Sala,
+    fk_requisitor -> Usuario,
+    fk_aprovador -> Usuario
+
+);
