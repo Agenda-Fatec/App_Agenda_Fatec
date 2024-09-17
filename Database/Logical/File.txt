@@ -8,7 +8,7 @@ Cargo (
 Bloco (
 
     id,
-    descricao,
+    nome,
     observacoes
 
 );

@@ -1,5 +1,13 @@
 <?php
 
+    /*
+
+        Com a função abaixo não é mais necessário utilizar o INCLUDE ou o REQUIRE
+        individualmente em cada nova instância de uma classe, pois este processo
+        será automatizado.
+
+    */
+
     spl_autoload_register(function($classe)
     {
 

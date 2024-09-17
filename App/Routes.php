@@ -1,5 +1,18 @@
 <?php
 
+    use App\Controller\
+    {
+
+        BlockController,
+        EquipmentController,
+        PositionController,
+        RoomController,
+        RoomEquipmentAssocController,
+        SchedulingController,
+        UserController
+
+    };
+
     $url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 
     switch($url)

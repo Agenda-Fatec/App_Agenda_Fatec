@@ -12,7 +12,7 @@ CREATE TABLE Cargo (
 CREATE TABLE Bloco (
 
     id INT AUTO_INCREMENT PRIMARY KEY,
-    descricao VARCHAR(255) NOT NULL UNIQUE,
+    nome VARCHAR(255) NOT NULL UNIQUE,
     observacoes VARCHAR(255) NULL DEFAULT "Nenhuma observação."
 
 );
