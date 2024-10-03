@@ -14,6 +14,34 @@
             
         }
 
+        public function Insert(BlockModel $model) : bool
+        {
+
+            return true;
+
+        }
+
+        public function Update(BlockModel $model) : bool
+        {
+
+            return true;
+
+        }
+
+        public function Delete(int $id) : bool
+        {
+
+            return true;
+
+        }
+
+        public function Select() : array
+        {
+
+            return array();
+
+        }
+
     }
 
 ?>
