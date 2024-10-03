@@ -461,10 +461,10 @@
             </Ligacao>
           </Ligacoes>
         </Atributo>
-        <Atributo nome="Descricao" id="49">
-          <Left Valor="1052"/>
+        <Atributo nome="Nome" id="49">
+          <Left Valor="1075"/>
           <Top Valor="242"/>
-          <Width Valor="82"/>
+          <Width Valor="59"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
           <Atributos/>

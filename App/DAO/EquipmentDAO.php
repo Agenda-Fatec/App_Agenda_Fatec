@@ -14,6 +14,34 @@
             
         }
 
+        public function Insert(EquipmentModel $model) : bool
+        {
+
+            return true;
+
+        }
+
+        public function Update(EquipmentModel $model) : bool
+        {
+
+            return true;
+
+        }
+
+        public function Delete(int $id) : bool
+        {
+
+            return true;
+
+        }
+
+        public function Select() : array
+        {
+
+            return array();
+
+        }
+
     }
 
 ?>

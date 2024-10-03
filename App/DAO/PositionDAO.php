@@ -14,6 +14,34 @@
             
         }
 
+        public function Insert(PositionModel $model) : bool
+        {
+
+            return true;
+
+        }
+
+        public function Update(PositionModel $model) : bool
+        {
+
+            return true;
+
+        }
+
+        public function Delete(int $id) : bool
+        {
+
+            return true;
+
+        }
+
+        public function Select() : array
+        {
+
+            return array();
+
+        }
+
     }
 
 ?>

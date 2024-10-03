@@ -40,7 +40,7 @@ Sala (
 Equipamento (
 
     id,
-    descricao,
+    nome,
     obervacoes
 
 );
