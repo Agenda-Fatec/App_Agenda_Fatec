@@ -3,13 +3,13 @@
     use App\Controller\
     {
 
-        BlockController,
-        EquipmentController,
-        PositionController,
-        RoomController,
-        RoomEquipmentAssocController,
-        SchedulingController,
-        UserController
+        AgendamentoController,
+        BlocoController,
+        CargoController,
+        EquipamentoController,
+        SalaEquipamentoAssocController,
+        SalaController,
+        UsuarioController
 
     };
 
@@ -18,142 +18,38 @@
     switch($url)
     {
 
-        // Início.
-
         case "/":
-
-            include VIEWS . "../Index.html";
-
+            include VIEWS . "../Index.php";
         break;
 
-        // Bloco.
-
-        case "/block/save":
-
-            BlockController::Save();
-
+        case "/cadastro":
+            UsuarioController::Form("Cadastro");
         break;
 
-        case "/block/remove":
-
-            BlockController::Remove();
-
+        case "/cadastro/salvar":
+            UsuarioController::Save();
         break;
 
-        case "/block/list":
-
-            BlockController::List();
-
+        case "/login":
+            UsuarioController::Form();
         break;
 
-        // Equipamento.
-
-        case "/equipment/save":
-
-            EquipmentController::Save();
-
+        case "/login/validar":
+            UsuarioController::Login();
         break;
 
-        case "/equipment/remove":
-
-            EquipmentController::Remove();
-
+        case "/login/verificar":
+            exit(var_dump($_SESSION));
         break;
 
-        case "/equipment/list":
-
-            EquipmentController::List();
-
+        case "/logout":
+            UsuarioController::Logout();
         break;
-
-        // Cargo.
-
-        case "/position/save":
-
-            PositionController::Save();
-
-        break;
-
-        case "/position/remove":
-
-            PositionController::Remove();
-
-        break;
-
-        case "/position/list":
-
-            PositionController::List();
-
-        break;
-
-        // Sala.
-
-        case "/room/save":
-
-            RoomController::Save();
-
-        break;
-
-        case "/room/remove":
-
-            RoomController::Remove();
-
-        break;
-
-        case "/room/list":
-
-            RoomController::List();
-
-        break;
-
-        // Agendamento.
-
-        case "/scheduling/save":
-
-            SchedulingController::Save();
-
-        break;
-
-        case "/scheduling/remove":
-
-            SchedulingController::Remove();
-
-        break;
-
-        case "/scheduling/list":
-
-            SchedulingController::List();
-
-        break;
-
-        // Usuário.
-
-        case "/user/save":
-
-            UserController::Save();
-
-        break;
-
-        case "/user/remove":
-
-            UserController::Remove();
-
-        break;
-
-        case "/user/list":
-
-            UserController::List();
-
-        break;
-
-        // Padrão.
 
         default:
-
             http_response_code(404);
 
-            include VIEWS . "../Error.html";
-
+            include VIEWS . "../Erro.php";
         break;
 
     }
