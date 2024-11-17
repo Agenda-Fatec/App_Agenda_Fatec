@@ -5,7 +5,8 @@ USE db_agenda_fatec;
 CREATE TABLE Cargo (
 
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(255) NOT NULL UNIQUE
+    nome VARCHAR(255) NOT NULL UNIQUE,
+    ativo BOOL NOT NULL DEFAULT true
 
 );
 
@@ -13,7 +14,8 @@ CREATE TABLE Bloco (
 
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL UNIQUE,
-    descricao VARCHAR(255) NULL DEFAULT "Nenhuma descrição."
+    descricao VARCHAR(255) NULL DEFAULT "Nenhuma descrição.",
+    ativo BOOL NOT NULL DEFAULT true
 
 );
 
@@ -24,6 +26,7 @@ CREATE TABLE Usuario (
     email VARCHAR(100) NOT NULL UNIQUE,
     senha CHAR(32) NOT NULL, -- Utilização de MD5 para simular uma criptografia.
     administrador BOOL NOT NULL DEFAULT False,
+    ativo BOOL NOT NULL DEFAULT true,
 
     fk_cargo INT NOT NULL,
     CONSTRAINT fk_cargo_usuario FOREIGN KEY(fk_cargo) REFERENCES Cargo(id)
@@ -36,6 +39,7 @@ CREATE TABLE Sala (
     nome VARCHAR(255) NOT NULL UNIQUE,
     numero VARCHAR(5) NOT NULL UNIQUE,
     descricao VARCHAR(255) NULL DEFAULT "Nenhuma descrição.",
+    ativo BOOL NOT NULL DEFAULT true,
 
     fk_bloco INT NOT NULL,
     CONSTRAINT fk_bloco_sala FOREIGN KEY(fk_bloco) REFERENCES Bloco(id)
@@ -46,7 +50,8 @@ CREATE TABLE Equipamento (
 
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL UNIQUE,
-    descricao VARCHAR(255) NULL DEFAULT "Nenhuma descrição."
+    descricao VARCHAR(255) NULL DEFAULT "Nenhuma descrição.",
+    ativo BOOL NOT NULL DEFAULT true
 
 );
 
@@ -82,3 +87,5 @@ CREATE TABLE Agendamento (
     CONSTRAINT fk_aprovador_agendamento FOREIGN KEY(fk_aprovador) REFERENCES Usuario(id)
 
 );
+
+SHOW TABLES;

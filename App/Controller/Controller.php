@@ -5,7 +5,7 @@
     abstract class Controller
     {
 
-        protected function Render($view, $model = null) : void
+        protected static function Render($view, $model = null) : void
         {
 
             $arquivo = VIEWS . $view . ".php";
@@ -23,6 +23,17 @@
                 exit("Arquivo não encontrado! Solicitação: " . $arquivo);
 
             }
+
+        }
+
+        protected static function Alert(string $message) : void
+        {
+
+            $domain = $_SERVER["HTTP_ORIGIN"];
+
+            exit("<script> alert('$message'); " .
+                 "history.pushState(null,null,'$domain/'); " .
+                 "window.location.reload(true); </script>");
 
         }
 
