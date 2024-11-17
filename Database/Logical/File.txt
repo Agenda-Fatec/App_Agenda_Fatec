@@ -1,7 +1,7 @@
 Cargo (
 
     id,
-    descricao
+    nome
 
 );
 
@@ -9,7 +9,7 @@ Bloco (
 
     id,
     nome,
-    observacoes
+    descricao
 
 );
 
@@ -17,7 +17,6 @@ Usuario (
 
     id,
     nome,
-    ra,
     email,
     senha,
     administrador,
@@ -31,7 +30,7 @@ Sala (
     id,
     nome,
     numero,
-    observacoes,
+    descricao,
 
     fk_bloco -> Bloco
 
@@ -41,7 +40,7 @@ Equipamento (
 
     id,
     nome,
-    obervacoes
+    descricao
 
 );
 
