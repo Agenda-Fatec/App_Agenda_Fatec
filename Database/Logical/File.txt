@@ -1,7 +1,8 @@
 Cargo (
 
     id,
-    nome
+    nome,
+    ativo
 
 );
 
@@ -9,7 +10,8 @@ Bloco (
 
     id,
     nome,
-    descricao
+    descricao,
+    ativo
 
 );
 
@@ -20,6 +22,7 @@ Usuario (
     email,
     senha,
     administrador,
+    ativo,
 
     fk_cargo -> Cargo
 
@@ -31,6 +34,7 @@ Sala (
     nome,
     numero,
     descricao,
+    ativo,
 
     fk_bloco -> Bloco
 
@@ -40,7 +44,8 @@ Equipamento (
 
     id,
     nome,
-    descricao
+    descricao,
+    ativo
 
 );
 
@@ -61,7 +66,7 @@ Agendamento (
     data_utilizacao,
     hora_inicio_utilizacao,
     hora_fim_utilizacao,
-    situacao
+    situacao,
 
     fk_sala -> Sala,
     fk_requisitor -> Usuario,
