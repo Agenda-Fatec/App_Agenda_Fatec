@@ -24,9 +24,9 @@
 
                 <div id="form">
 
-                    <form action="/cadastro/salvar" method="post">
+                    <form action="<?= ROOT ?>/cadastro/salvar" method="post">
 
-                        <figure> <img src="<?= ROOT ?>/View/Assets/Images/Storyset/Register.svg" alt="Cadastro"> </figure>
+                        <figure> <img src="<?= ROOT ?>/View/Assets/Images/Storyset/Cadastro.svg" alt="Cadastro"> </figure>
 
                         <section id="data">
 
@@ -39,11 +39,11 @@
                             <label for="fk_cargo"> Defina sua relação com a instituição de ensino: </label>
                             <select id="fk_cargo" name="fk_cargo" required>
 
-                                <option value="1"> Aluno(a) </option>
-                                <option value="2"> Professor(a) </option>
-                                <option value="3"> Auxiliar de Docente </option>
-                                <option value="4"> Coordenador(a) </option>
-                                <option value="5"> Diretor(a) </option>
+                                <?php foreach($model as $cargo): ?>
+
+                                    <option value="<?= $cargo->id ?>"> <?= $cargo->nome ?> </option>
+
+                                <?php endforeach ?>
 
                             </select>
 
@@ -55,13 +55,13 @@
 
                             <div id="buttons">
 
-                                <a href="/"> Cancelar </a>
+                                <a href="<?= ROOT ?>/"> Cancelar </a>
                                 <button type="reset"> Limpar </button>
                                 <button type="submit"> Cadastrar </button>
 
                             </div>
 
-                            <a id="register" href="/login"> Já possui um cadastro? Clique aqui. </a>
+                            <a id="register" href="<?= ROOT ?>/login"> Já possui um cadastro? Clique aqui. </a>
 
                         </section>
 

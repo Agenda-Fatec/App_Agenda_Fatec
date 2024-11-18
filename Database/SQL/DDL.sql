@@ -39,6 +39,7 @@ CREATE TABLE Sala (
     nome VARCHAR(255) NOT NULL UNIQUE,
     numero VARCHAR(5) NOT NULL UNIQUE,
     descricao VARCHAR(255) NULL DEFAULT "Nenhuma descrição.",
+    status_atual ENUM("Disponível", "Em uso", "Indisponível") NOT NULL DEFAULT "Disponível",
     ativo BOOL NOT NULL DEFAULT true,
 
     fk_bloco INT NOT NULL,

@@ -24,7 +24,7 @@
 
                 <div id="form">
 
-                    <form action="/login/validar" method="post">
+                    <form action="<?= ROOT ?>/login/validar" method="post">
 
                         <figure> <img src="<?= ROOT ?>/View/Assets/Images/Storyset/Login.svg" alt="Login"> </figure>
 
@@ -38,13 +38,13 @@
 
                             <div id="buttons">
 
-                                <a href="/"> Cancelar </a>
+                                <a href="<?= ROOT ?>/"> Cancelar </a>
                                 <button type="reset"> Limpar </button>
                                 <button type="submit"> Entrar </button>
 
                             </div>
 
-                            <a id="register" href="/cadastro"> Não possui um cadastro? Clique aqui. </a>
+                            <a id="register" href="<?= ROOT ?>/cadastro"> Não possui um cadastro? Clique aqui. </a>
 
                         </section>
 

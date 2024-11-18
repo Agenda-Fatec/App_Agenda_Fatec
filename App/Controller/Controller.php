@@ -26,13 +26,11 @@
 
         }
 
-        protected static function Alert(string $message) : void
+        protected static function Alert(string $message, $header = "/") : void
         {
 
-            $domain = $_SERVER["HTTP_ORIGIN"];
-
             exit("<script> alert('$message'); " .
-                 "history.pushState(null,null,'$domain/'); " .
+                 "history.pushState(null, null, '$header'); " .
                  "window.location.reload(true); </script>");
 
         }

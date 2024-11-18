@@ -28,7 +28,7 @@
 
                 <section id="error">
 
-                    <figure> <img src="<?= ROOT ?>/View/Assets/Images/Favicon.png" alt="Icon"> </figure>
+                    <figure> <img src="<?= ROOT ?>/View/Assets/Images/Favicon.png" alt="Ícone"> </figure>
 
                     <h2> Página não encontrada! </h2>
 
