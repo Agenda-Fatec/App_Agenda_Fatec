@@ -15,7 +15,7 @@
 
     $url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 
-    switch($url)
+    switch(substr(ROOT . $url, strlen(ROOT)))
     {
 
         case "/":
@@ -44,6 +44,18 @@
 
         case "/logout":
             UsuarioController::Logout();
+        break;
+
+        case "/salas":
+            SalaController::List("Salas");
+        break;
+
+        case "/sala/descricao":
+            SalaController::Describe();
+        break;
+
+        case "/desenvolvedores":
+            include VIEWS . "../Equipe.php";
         break;
 
         default:

@@ -43,13 +43,13 @@
         
                     </article>
         
-                    <figure> <img src="<?= ROOT ?>/View/Assets/Images/Storyset/Home.svg" alt="Calendário"> </figure>
+                    <figure> <img src="<?= ROOT ?>/View/Assets/Images/Storyset/Inicio.svg" alt="Calendário"> </figure>
         
                 </section>
 
                 <section id="about">
 
-                    <figure> <img src="<?= ROOT ?>/View/Assets/Images/Storyset/About.svg" alt="Estudo"> </figure>
+                    <figure> <img src="<?= ROOT ?>/View/Assets/Images/Storyset/Sobre.svg" alt="Estudo"> </figure>
 
                     <article>
         
@@ -93,7 +93,7 @@
         
                     </article>
 
-                    <figure> <img src="<?= ROOT ?>/View/Assets/Images/Storyset/Contact.svg" alt="Contatos"> </figure>
+                    <figure> <img src="<?= ROOT ?>/View/Assets/Images/Storyset/Contato.svg" alt="Contatos"> </figure>
 
                 </section>
 

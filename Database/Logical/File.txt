@@ -34,6 +34,7 @@ Sala (
     nome,
     numero,
     descricao,
+    status_atual,
     ativo,
 
     fk_bloco -> Bloco

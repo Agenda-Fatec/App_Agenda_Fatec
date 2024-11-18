@@ -8,9 +8,9 @@
 
     <nav>
 
-        <a href="/"> Início </a>
-        <a href="/"> Salas </a>
-        <a href="/"> Desenvolvedores </a>
+        <a href="<?= ROOT ?>/"> Início </a>
+        <a href="<?= ROOT ?>/salas"> Salas </a>
+        <a href="<?= ROOT ?>/desenvolvedores"> Desenvolvedores </a>
 
     </nav>
 

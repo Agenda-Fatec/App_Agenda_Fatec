@@ -2,7 +2,13 @@
 
     namespace App\Controller;
 
-    use App\Model\UsuarioModel;
+    use App\Model\
+    {
+
+        UsuarioModel,
+        CargoModel
+
+    };
 
     class UsuarioController extends Controller
     {
@@ -10,12 +16,14 @@
         public static function Form(string $form = "Login") : void
         {
 
-            $model = new UsuarioModel();
+            $model = null;
 
-            if(isset($_GET["id"]))
+            if($form === "Cadastro")
             {
 
-                $model->List((int) $_GET["id"]);
+                $model = new CargoModel();
+
+                $model->List();
 
                 $model = $model->data;
 
@@ -46,7 +54,7 @@
 
                 $model->senha = $_POST["senha"];
 
-                $model->fk_cargo = $_POST["fk_cargo"];
+                $model->fk_cargo = (int) $_POST["fk_cargo"];
 
                 $model->Save();
 
@@ -57,7 +65,7 @@
             else
             {
 
-                parent::Alert("Senhas não correspondentes! Faça as alterações necessárias e tente novamente.");
+                parent::Alert("Senhas não correspondentes! Faça as alterações necessárias e tente novamente.", "/cadastro");
 
             }
 
@@ -77,6 +85,8 @@
 
                 $_SESSION["usuario"]["id"] = $model->data->id;
 
+                $_SESSION["usuario"]["administrador"] = $model->data->administrador;
+
                 $_SESSION["usuario"]["nome"] = $model->data->nome;
 
                 $_SESSION["usuario"]["email"] = $model->data->email;
@@ -88,7 +98,7 @@
             else
             {
 
-                parent::Alert("Dados inválidos! Certifique-se de que já está cadastrado e tente novamente.");
+                parent::Alert("Dados inválidos! Certifique-se de que já está cadastrado e tente novamente.", "/login");
 
             }
 
