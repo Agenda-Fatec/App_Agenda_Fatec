@@ -101,12 +101,28 @@
 
 }
 
+#blocker #menu nav details summary {
+
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+}
+
+#blocker #menu nav details .module {
+
+    margin: 25px 0 0 35px;
+
+}
+
 #blocker #menu nav a {
 
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     border-radius: 5px;
     font-size: 25px;
     font-weight: bold;
@@ -115,6 +131,12 @@
     padding: 5px;
     cursor: pointer;
     transition: 0.5s;
+
+}
+
+#blocker #menu nav details a {
+
+    padding-left: 35px;
 
 }
 

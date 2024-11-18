@@ -7,6 +7,24 @@
     class EquipamentoController extends Controller
     {
 
+        public static function Form() : void
+        {
+
+            $model = new EquipamentoModel();
+
+            if(isset($_GET["id"]))
+            {
+
+                $model->List((int) $_GET["id"]);
+
+                $model = $model->data;
+
+            }
+
+            parent::Render("Equipamento/Form", $model);
+
+        }
+
         public static function Save() : void
         {
 
@@ -29,21 +47,16 @@
 
         }
 
-        public static function Add() : void
+        public static function Toggle() : void
         {
 
-            (new EquipamentoModel())->Add((int) $_GET["id"]);
+            $model = new EquipamentoModel();
 
-            header("Location: /");
+            $id = (int) $_GET["id"];
 
-        }
+            ((bool) $_GET["ativo"]) ? $model->Remove($id) : $model->Add($id);
 
-        public static function Remove() : void
-        {
-
-            (new EquipamentoModel())->Remove((int) $_GET["id"]);
-
-            header("Location: /");
+            header("Location: /equipamento/listagem");
 
         }
 

@@ -71,7 +71,7 @@
         public function Select() : array
         {
 
-            $sql = "SELECT * FROM Cargo WHERE ativo = true";
+            $sql = "SELECT * FROM Cargo ORDER BY id ASC";
 
             $stmt = $this->connection->prepare($sql);
 
@@ -84,7 +84,7 @@
         public function Search(int $id) : object | false
         {
 
-            $sql = "SELECT * FROM Cargo WHERE id = ? AND ativo = true";
+            $sql = "SELECT * FROM Cargo WHERE id = ?";
 
             $stmt = $this->connection->prepare($sql);
 

@@ -14,6 +14,24 @@
     class SalaController extends Controller
     {
 
+        public static function Form() : void
+        {
+
+            $model = new SalaModel();
+
+            if(isset($_GET["id"]))
+            {
+
+                $model->List((int) $_GET["id"]);
+
+                $model = $model->data;
+
+            }
+
+            parent::Render("Sala/Form", $model);
+
+        }
+
         public static function Save() : void
         {
 
@@ -40,21 +58,16 @@
 
         }
 
-        public static function Add() : void
+        public static function Toggle() : void
         {
 
-            (new SalaModel())->Add((int) $_GET["id"]);
+            $model = new SalaModel();
 
-            header("Location: /");
+            $id = (int) $_GET["id"];
 
-        }
+            ((bool) $_GET["ativo"]) ? $model->Remove($id) : $model->Add($id);
 
-        public static function Remove() : void
-        {
-
-            (new SalaModel())->Remove((int) $_GET["id"]);
-
-            header("Location: /");
+            header("Location: /sala/listagem");
 
         }
 
@@ -65,7 +78,23 @@
 
             $model->List();
 
-            parent::Render("Sala/$form", $model->data);
+            if($form === "Listagem")
+            {
+
+                $blocos = new BlocoModel();
+
+                $blocos->List();
+
+                parent::Render("Sala/$form", array($model->data, $blocos->data));
+
+            }
+
+            else
+            {
+
+                parent::Render("Sala/$form", $model->data);
+
+            }
 
         }
 
