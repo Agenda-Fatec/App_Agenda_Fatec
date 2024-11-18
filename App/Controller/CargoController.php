@@ -7,6 +7,24 @@
     class CargoController extends Controller
     {
 
+        public static function Form() : void
+        {
+
+            $model = new CargoModel();
+
+            if(isset($_GET["id"]))
+            {
+
+                $model->List((int) $_GET["id"]);
+
+                $model = $model->data;
+
+            }
+
+            parent::Render("Cargo/Form", $model);
+
+        }
+
         public static function Save() : void
         {
 
@@ -27,21 +45,16 @@
 
         }
 
-        public static function Add() : void
+        public static function Toggle() : void
         {
 
-            (new CargoModel())->Add((int) $_GET["id"]);
+            $model = new CargoModel();
 
-            header("Location: /");
+            $id = (int) $_GET["id"];
 
-        }
+            ((bool) $_GET["ativo"]) ? $model->Remove($id) : $model->Add($id);
 
-        public static function Remove() : void
-        {
-
-            (new CargoModel())->Remove((int) $_GET["id"]);
-
-            header("Location: /");
+            header("Location: /cargo/listagem");
 
         }
 

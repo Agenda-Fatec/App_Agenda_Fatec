@@ -33,17 +33,21 @@ function ADD_Favicon()
 function ADD_Menu_Events()
 {
 
-    document.querySelector("header").querySelector("button").onclick = function() {
+    document.getElementById("open-menu").onclick = function() {
 
         document.getElementById("blocker").style.transform = "translateX(0%)";
 
     };
 
-    document.getElementById("menu").querySelector("button").onclick = function() {
+    const close_menu = function() {
 
         document.getElementById("blocker").style.transform = "translateX(-100%)";
 
     };
+
+    document.getElementById("close-menu").onclick = close_menu;
+
+    document.getElementById("blocker").onclick = close_menu;
 
 }
 
