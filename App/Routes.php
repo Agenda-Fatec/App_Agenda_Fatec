@@ -7,7 +7,6 @@
         BlocoController,
         CargoController,
         EquipamentoController,
-        SalaEquipamentoAssocController,
         SalaController,
         UsuarioController
 
@@ -59,9 +58,80 @@
         break;
 
         default:
-            http_response_code(404);
+            
+            if(count($_SESSION) > 0 && (bool) $_SESSION["usuario"]["administrador"])
+            {
 
-            include VIEWS . "../Erro.php";
+                switch(substr(ROOT . $url, strlen(ROOT)))
+                {
+
+                    case "/bloco":
+                        BlocoController::Form();
+                    break;
+
+                    case "/bloco/listagem":
+                        BlocoController::List();
+                    break;
+
+                    case "/bloco/alternar_ativacao":
+                        BlocoController::Toggle();
+                    break;
+
+                    case "/cargo":
+                        CargoController::Form();
+                    break;
+
+                    case "/cargo/listagem":
+                        CargoController::List();
+                    break;
+
+                    case "/cargo/alternar_ativacao":
+                        CargoController::Toggle();
+                    break;
+
+                    case "/equipamento":
+                        EquipamentoController::Form();
+                    break;
+
+                    case "/equipamento/listagem":
+                        EquipamentoController::List();
+                    break;
+
+                    case "/equipamento/alternar_ativacao":
+                        EquipamentoController::Toggle();
+                    break;
+
+                    case "/sala":
+                        SalaController::Form();
+                    break;
+
+                    case "/sala/listagem":
+                        SalaController::List();
+                    break;
+
+                    case "/sala/alternar_ativacao":
+                        SalaController::Toggle();
+                    break;
+
+                    default:
+                        http_response_code(404);
+
+                        include VIEWS . "../Erro.php";
+                    break;
+
+                }
+
+            }
+
+            else
+            {
+
+                http_response_code(404);
+
+                include VIEWS . "../Erro.php";
+
+            }
+
         break;
 
     }
