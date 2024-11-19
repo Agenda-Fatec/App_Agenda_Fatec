@@ -11,7 +11,7 @@
 
 // Constants and Variables:
 
-const assets_root_folder = "/View/";
+const assets_root_folder = "";
 
 // Functions:
 
@@ -24,7 +24,7 @@ function ADD_Favicon()
 
     favicon.setAttribute("type", "image/x-icon");
 
-    favicon.setAttribute("href", `${assets_root_folder}Assets/Images/Favicon.png`);
+    favicon.setAttribute("href", `${assets_root_folder}/View/Assets/Images/Favicon.png`);
 
     document.head.appendChild(favicon);
 
@@ -33,21 +33,32 @@ function ADD_Favicon()
 function ADD_Menu_Events()
 {
 
+    // Abrir menu.
+
     document.getElementById("open-menu").onclick = function() {
 
         document.getElementById("blocker").style.transform = "translateX(0%)";
 
     };
 
-    const close_menu = function() {
+    // Fechar menu.
+
+    document.getElementById("close-menu").onclick = function() {
 
         document.getElementById("blocker").style.transform = "translateX(-100%)";
 
     };
 
-    document.getElementById("close-menu").onclick = close_menu;
+    window.onclick = function(element) {
 
-    document.getElementById("blocker").onclick = close_menu;
+        if(element.target === document.getElementById("blocker"))
+        {
+
+            document.getElementById("blocker").style.transform = "translateX(-100%)";
+
+        }
+
+    };
 
 }
 

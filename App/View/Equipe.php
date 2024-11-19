@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title> Time de Desenvolvimento | Agenda Fatec </title>
+        <title> Equipe de Desenvolvimento | Agenda Fatec </title>
 
         <script defer type="text/javascript" src="<?= ROOT ?>/View/Assets/JS/Global.js">  </script>
 
@@ -28,7 +28,7 @@
 
                 <section id="team">
 
-                    <h1> Time de Desenvolvedores </h1>
+                    <h1> Equipe do Projeto </h1>
 
                     <div class="developer">
 

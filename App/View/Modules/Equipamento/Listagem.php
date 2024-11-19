@@ -54,9 +54,9 @@
 
                                     <td> <?= $equipamento->nome ?> </td>
 
-                                    <td> <a href="/equipamento?id=<?= $equipamento->id ?>"> Editar </a> </td>
+                                    <td> <a href="<?= ROOT ?>/equipamento?id=<?= $equipamento->id ?>"> Editar </a> </td>
 
-                                    <td> <a href="/equipamento/alternar_ativacao?id=<?= $equipamento->id ?>&ativo=<?= $equipamento->ativo ?>"> <?= ((bool) $equipamento->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
+                                    <td> <a href="<?= ROOT ?>/equipamento/alternar_ativacao?id=<?= $equipamento->id ?>&ativo=<?= $equipamento->ativo ?>"> <?= ((bool) $equipamento->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
 
                                 </tr>
 

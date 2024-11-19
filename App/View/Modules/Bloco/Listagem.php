@@ -54,9 +54,9 @@
 
                                     <td> <?= $bloco->nome ?> </td>
 
-                                    <td> <a href="/bloco?id=<?= $bloco->id ?>"> Editar </a> </td>
+                                    <td> <a href="<?= ROOT ?>/bloco?id=<?= $bloco->id ?>"> Editar </a> </td>
 
-                                    <td> <a href="/bloco/alternar_ativacao?id=<?= $bloco->id ?>&ativo=<?= $bloco->ativo ?>"> <?= ((bool) $bloco->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
+                                    <td> <a href="<?= ROOT ?>/bloco/alternar_ativacao?id=<?= $bloco->id ?>&ativo=<?= $bloco->ativo ?>"> <?= ((bool) $bloco->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
 
                                 </tr>
 

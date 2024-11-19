@@ -41,7 +41,7 @@
 
                 $model = new UsuarioModel();
 
-                if((int) $_POST["id"] > 0)
+                if(isset($_POST["id"]) && (int) $_POST["id"] > 0)
                 {
 
                     $model->id = (int) $_POST["id"];
@@ -58,7 +58,7 @@
 
                 $model->Save();
 
-                header("Location: /");
+                header("Location: " . ROOT . "/");
                 
             }
 
@@ -91,7 +91,7 @@
 
                 $_SESSION["usuario"]["email"] = $model->data->email;
 
-                header("Location: /");
+                header("Location: " . ROOT . "/");
 
             }
 
@@ -109,25 +109,20 @@
 
             session_destroy();
 
-            header("Location: /");
+            header("Location: " . ROOT . "/");
 
         }
 
-        public static function Add() : void
+        public static function Toggle() : void
         {
 
-            (new UsuarioModel())->Add((int) $_GET["id"]);
+            $model = new UsuarioModel();
 
-            header("Location: /");
+            $id = (int) $_GET["id"];
 
-        }
+            ((bool) $_GET["ativo"]) ? $model->Remove($id) : $model->Add($id);
 
-        public static function Remove() : void
-        {
-
-            (new UsuarioModel())->Remove((int) $_GET["id"]);
-
-            header("Location: /");
+            header("Location: " . ROOT . "/usuario/listagem");
 
         }
 
