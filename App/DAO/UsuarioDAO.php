@@ -100,7 +100,7 @@
         public function Select() : array
         {
 
-            $sql = "SELECT * FROM Usuario WHERE ativo = true";
+            $sql = "SELECT * FROM Usuario ORDER BY id ASC";
 
             $stmt = $this->connection->prepare($sql);
 
@@ -113,7 +113,7 @@
         public function Search(int $id) : object | false
         {
 
-            $sql = "SELECT * FROM Usuario WHERE id = ? AND ativo = true";
+            $sql = "SELECT * FROM Usuario WHERE id = ?";
 
             $stmt = $this->connection->prepare($sql);
 

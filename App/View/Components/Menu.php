@@ -9,14 +9,8 @@
         <nav>
 
             <a href="<?= ROOT ?>/"> Início </a>
-
-            <details>
-
-                <summary> Páginas </summary>
-                <a href="<?= ROOT ?>/salas"> Salas </a>
-                <a href="<?= ROOT ?>/desenvolvedores"> Desenvolvedores </a>
-
-            </details>
+            <a href="<?= ROOT ?>/salas"> Salas </a>
+            <a href="<?= ROOT ?>/equipe"> Equipe </a>
 
             <?php if(count($_SESSION) > 0 && (bool) $_SESSION["usuario"]["administrador"]): ?>
 

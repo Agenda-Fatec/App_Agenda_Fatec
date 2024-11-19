@@ -54,9 +54,9 @@
 
                                     <td> <?= $cargo->nome ?> </td>
 
-                                    <td> <a href="/cargo?id=<?= $cargo->id ?>"> Editar </a> </td>
+                                    <td> <a href="<?= ROOT ?>/cargo?id=<?= $cargo->id ?>"> Editar </a> </td>
 
-                                    <td> <a href="/cargo/alternar_ativacao?id=<?= $cargo->id ?>&ativo=<?= $cargo->ativo ?>"> <?= ((bool) $cargo->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
+                                    <td> <a href="<?= ROOT ?>/cargo/alternar_ativacao?id=<?= $cargo->id ?>&ativo=<?= $cargo->ativo ?>"> <?= ((bool) $cargo->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
 
                                 </tr>
 

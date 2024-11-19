@@ -14,11 +14,15 @@
 
     $url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 
-    switch(substr(ROOT . $url, strlen(ROOT)))
+    switch(substr($url, strlen(ROOT)))
     {
 
         case "/":
-            include VIEWS . "../Index.php";
+            include VIEWS . "../Inicio.php";
+        break;
+
+        case "/equipe":
+            include VIEWS . "../Equipe.php";
         break;
 
         case "/cadastro":
@@ -53,8 +57,8 @@
             SalaController::Describe();
         break;
 
-        case "/desenvolvedores":
-            include VIEWS . "../Equipe.php";
+        case "/agendamento/novo":
+            AgendamentoController::Form();
         break;
 
         default:
@@ -62,7 +66,7 @@
             if(count($_SESSION) > 0 && (bool) $_SESSION["usuario"]["administrador"])
             {
 
-                switch(substr(ROOT . $url, strlen(ROOT)))
+                switch(substr($url, strlen(ROOT)))
                 {
 
                     case "/bloco":

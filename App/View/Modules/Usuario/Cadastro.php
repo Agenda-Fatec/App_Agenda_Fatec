@@ -41,7 +41,11 @@
 
                                 <?php foreach($model as $cargo): ?>
 
-                                    <option value="<?= $cargo->id ?>"> <?= $cargo->nome ?> </option>
+                                    <?php if((bool) $cargo->ativo): ?>
+
+                                        <option value="<?= $cargo->id ?>"> <?= $cargo->nome ?> </option>
+
+                                    <?php endif ?>
 
                                 <?php endforeach ?>
 

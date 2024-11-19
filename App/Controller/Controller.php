@@ -29,6 +29,8 @@
         protected static function Alert(string $message, $header = "/") : void
         {
 
+            $header = ROOT . $header;
+
             exit("<script> alert('$message'); " .
                  "history.pushState(null, null, '$header'); " .
                  "window.location.reload(true); </script>");

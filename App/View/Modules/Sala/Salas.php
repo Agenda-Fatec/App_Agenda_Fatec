@@ -32,11 +32,15 @@
 
                     <?php foreach($model as $sala): ?>
 
-                        <a class="room" href="/sala/descricao?id=<?= $sala->id ?>">
+                        <?php if((bool) $sala->ativo): ?>
 
-                            <h2 class="room-name"> <?= $sala->nome . " ($sala->numero)" ?> </h2>
+                            <a class="room" href="<?= ROOT ?>/sala/descricao?id=<?= $sala->id ?>">
 
-                        </a>
+                                <h2 class="room-name"> <?= $sala->nome . " ($sala->numero)" ?> </h2>
+
+                            </a>
+                        
+                        <?php endif ?>
 
                     <?php endforeach ?>
 
