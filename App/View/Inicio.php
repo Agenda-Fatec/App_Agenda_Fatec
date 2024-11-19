@@ -10,9 +10,7 @@
 
         <script defer type="text/javascript" src="<?= ROOT ?>/View/Assets/JS/Global.js">  </script>
 
-        <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/View/Assets/CSS/Index.css">
-
-        <!-- Favicon (Global.js) -->
+        <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/View/Assets/CSS/Inicio.css">
 
     </head>
 

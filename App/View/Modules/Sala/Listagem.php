@@ -62,9 +62,9 @@
 
                                     <td> <?= $model[1][(int) $sala->fk_bloco - 1]->nome ?> </td>
 
-                                    <td> <a href="/sala?id=<?= $sala->id ?>"> Editar </a> </td>
+                                    <td> <a href="<?= ROOT ?>/sala?id=<?= $sala->id ?>"> Editar </a> </td>
 
-                                    <td> <a href="/sala/alternar_ativacao?id=<?= $sala->id ?>&ativo=<?= $sala->ativo ?>"> <?= ((bool) $sala->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
+                                    <td> <a href="<?= ROOT ?>/sala/alternar_ativacao?id=<?= $sala->id ?>&ativo=<?= $sala->ativo ?>"> <?= ((bool) $sala->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
 
                                 </tr>
 

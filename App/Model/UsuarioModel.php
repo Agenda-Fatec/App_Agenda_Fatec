@@ -25,7 +25,7 @@
 
             $this->data = $dao->Login($this);
 
-            return (gettype($this->data) === "object");
+            return (gettype($this->data) === "object" && $this->data->ativo);
 
         }
 

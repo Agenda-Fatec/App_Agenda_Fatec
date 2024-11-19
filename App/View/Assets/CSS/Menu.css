@@ -36,9 +36,10 @@
 
     height: 100%;
     width: 300px;
+    max-width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 175px 40px auto;
+    grid-template-rows: 175px 40px minmax(80px, auto);
     gap: 25px;
     background-color: var(--contrast-color);
     padding: 15px;
