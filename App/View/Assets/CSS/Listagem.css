@@ -61,6 +61,13 @@
 
 }
 
+#module-list table tbody tr td input[type="checkbox"] {
+
+    height: 20px;
+    width: 20px;
+
+}
+
 #module-list table tbody tr td a {
 
     background-color: transparent;

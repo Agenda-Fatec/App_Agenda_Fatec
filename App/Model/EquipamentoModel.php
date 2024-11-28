@@ -7,7 +7,25 @@
     class EquipamentoModel extends Model
     {
 
-        public $id = 0, $nome, $descricao, $ativo;
+        public $id, $nome, $descricao, $ativo;
+
+        public function __construct()
+        {
+
+            if(empty($this->id))
+            {
+
+                $this->id = 0;
+
+                $this->nome = "";
+
+                $this->descricao = "Nenhuma descrição.";
+
+                $this->ativo = 1;
+
+            }
+            
+        }
 
         public function Save() : void
         {

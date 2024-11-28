@@ -41,7 +41,7 @@
 
             $model->Save();
 
-            header("Location: " . ROOT . "/");
+            header("Location: " . ROOT . "/cargo/listagem");
 
         }
 

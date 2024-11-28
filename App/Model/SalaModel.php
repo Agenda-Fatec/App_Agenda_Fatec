@@ -7,7 +7,31 @@
     class SalaModel extends Model
     {
 
-        public $id = 0, $nome, $numero, $descricao, $status_atual, $ativo, $fk_bloco;
+        public $id, $nome, $numero, $descricao, $status_atual, $ativo, $fk_bloco;
+
+        public function __construct()
+        {
+
+            if(empty($this->id))
+            {
+
+                $this->id = 0;
+
+                $this->nome = "";
+
+                $this->numero = 0;
+
+                $this->descricao = "Nenhuma descrição.";
+
+                $this->status_atual = "Disponível";
+
+                $this->ativo = 1;
+
+                $this->fk_bloco = 0;
+
+            }
+            
+        }
 
         public function Save() : void
         {

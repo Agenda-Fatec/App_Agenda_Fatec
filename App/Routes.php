@@ -73,6 +73,10 @@
                         BlocoController::Form();
                     break;
 
+                    case "/bloco/salvar":
+                        BlocoController::Save();
+                    break;
+
                     case "/bloco/listagem":
                         BlocoController::List();
                     break;
@@ -83,6 +87,10 @@
 
                     case "/cargo":
                         CargoController::Form();
+                    break;
+
+                    case "/cargo/salvar":
+                        CargoController::Save();
                     break;
 
                     case "/cargo/listagem":
@@ -97,6 +105,10 @@
                         EquipamentoController::Form();
                     break;
 
+                    case "/equipamento/salvar":
+                        EquipamentoController::Save();
+                    break;
+
                     case "/equipamento/listagem":
                         EquipamentoController::List();
                     break;
@@ -109,12 +121,28 @@
                         SalaController::Form();
                     break;
 
+                    case "/sala/salvar":
+                        SalaController::Save();
+                    break;
+
                     case "/sala/listagem":
                         SalaController::List();
                     break;
 
                     case "/sala/alternar_ativacao":
                         SalaController::Toggle();
+                    break;
+
+                    case "/usuario/listagem":
+                        UsuarioController::List();
+                    break;
+
+                    case "/usuario/alternar_ativacao":
+                        UsuarioController::Toggle();
+                    break;
+
+                    case "/usuario/reclassificar":
+                        UsuarioController::Reclassify();
                     break;
 
                     default:

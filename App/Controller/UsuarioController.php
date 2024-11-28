@@ -107,6 +107,8 @@
         public static function Logout() : void
         {
 
+            $_SESSION = array();
+
             session_destroy();
 
             header("Location: " . ROOT . "/");
@@ -126,6 +128,19 @@
 
         }
 
+        public static function Reclassify() : void
+        {
+
+            $model = new UsuarioModel();
+
+            $id = (int) $_GET["id"];
+
+            ((bool) $_GET["administrador"]) ? $model->Reclassify($id, 0) : $model->Reclassify($id, 1);
+
+            header("Location: " . ROOT . "/usuario/listagem");
+
+        }
+
         public static function List() : void
         {
 
@@ -133,7 +148,11 @@
 
             $model->List();
 
-            parent::Render("Usuario/Listagem", $model);
+            $cargos = new CargoModel();
+
+            $cargos->List();
+
+            parent::Render("Usuario/Listagem", array($model->data, $cargos->data));
 
         }
 
