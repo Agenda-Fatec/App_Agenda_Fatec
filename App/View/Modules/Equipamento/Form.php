@@ -26,7 +26,7 @@
 
                     <h1> Cadastro de Equipamento </h1>
 
-                    <form action="<?= ROOT ?>/equipamento/salvar">
+                    <form action="<?= ROOT ?>/equipamento/salvar" method="post">
 
                         <input type="hidden" id="id" name="id" value="<?= $model->id ?>">
 

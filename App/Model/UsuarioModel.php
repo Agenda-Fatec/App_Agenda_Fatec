@@ -7,7 +7,31 @@
     class UsuarioModel extends Model
     {
 
-        public $id = 0, $nome, $email, $senha, $administrador, $ativo, $fk_cargo;
+        public $id, $nome, $email, $senha, $administrador, $ativo, $fk_cargo;
+
+        public function __construct()
+        {
+
+            if(empty($this->id))
+            {
+
+                $this->id = 0;
+
+                $this->nome = "";
+
+                $this->email = "";
+
+                $this->senha = "";
+
+                $this->administrador = 0;
+
+                $this->ativo = 1;
+
+                $this->fk_cargo = 0;
+
+            }
+            
+        }
 
         public function Save() : void
         {
@@ -25,7 +49,7 @@
 
             $this->data = $dao->Login($this);
 
-            return (gettype($this->data) === "object" && $this->data->ativo);
+            return (gettype($this->data) === "object" && (bool) $this->data->ativo);
 
         }
 
@@ -40,6 +64,13 @@
         {
 
             (new UsuarioDAO())->Deactive($id);
+
+        }
+
+        public function Reclassify(int $id, int $condition) : void
+        {
+
+            (new UsuarioDAO())->Reclassify($id, $condition);
 
         }
 

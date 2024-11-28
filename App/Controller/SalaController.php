@@ -54,7 +54,7 @@
 
             $model->Save();
 
-            header("Location: " . ROOT . "/");
+            header("Location: " . ROOT . "/sala/listagem");
 
         }
 

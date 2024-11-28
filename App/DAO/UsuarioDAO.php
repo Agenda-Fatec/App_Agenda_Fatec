@@ -97,6 +97,21 @@
 
         }
 
+        public function Reclassify(int $id, int $condition) : void
+        {
+
+            $sql = "UPDATE Usuario SET administrador = ? WHERE id = ?";
+
+            $stmt = $this->connection->prepare($sql);
+
+            $stmt->bindValue(1, $condition);
+
+            $stmt->bindValue(2, $id);
+
+            $stmt->execute();
+
+        }
+
         public function Select() : array
         {
 

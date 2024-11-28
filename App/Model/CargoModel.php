@@ -7,7 +7,23 @@
     class CargoModel extends Model
     {
 
-        public $id = 0, $nome, $ativo;
+        public $id, $nome, $ativo;
+
+        public function __construct()
+        {
+
+            if(empty($this->id))
+            {
+
+                $this->id = 0;
+
+                $this->nome = "";
+
+                $this->ativo = 1;
+
+            }
+            
+        }
 
         public function Save() : void
         {

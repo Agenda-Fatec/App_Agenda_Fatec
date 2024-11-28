@@ -34,6 +34,14 @@
 
                     <?php endforeach ?>
 
+                    <details class="module">
+
+                        <summary> Usuários </summary>
+
+                        <a href="<?= ROOT ?>/usuario/listagem"> Listagem </a>
+
+                    </details>
+
                 </details>
 
             <?php endif ?>

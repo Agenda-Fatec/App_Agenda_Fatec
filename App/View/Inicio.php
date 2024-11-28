@@ -12,6 +12,8 @@
 
         <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/View/Assets/CSS/Inicio.css">
 
+        <!-- Favicon (Global.js) -->
+
     </head>
 
     <body>
