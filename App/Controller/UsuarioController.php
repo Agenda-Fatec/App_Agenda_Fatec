@@ -58,7 +58,7 @@
 
                 $model->Save();
 
-                header("Location: " . ROOT . "/");
+                header("Location: " . ROUTES . "/");
                 
             }
 
@@ -91,7 +91,7 @@
 
                 $_SESSION["usuario"]["email"] = $model->data->email;
 
-                header("Location: " . ROOT . "/");
+                header("Location: " . ROUTES . "/");
 
             }
 
@@ -111,7 +111,7 @@
 
             session_destroy();
 
-            header("Location: " . ROOT . "/");
+            header("Location: " . ROUTES . "/");
 
         }
 
@@ -124,7 +124,7 @@
 
             ((bool) $_GET["ativo"]) ? $model->Remove($id) : $model->Add($id);
 
-            header("Location: " . ROOT . "/usuario/listagem");
+            header("Location: " . ROUTES . "/usuario/listagem");
 
         }
 
@@ -137,7 +137,7 @@
 
             ((bool) $_GET["administrador"]) ? $model->Reclassify($id, 0) : $model->Reclassify($id, 1);
 
-            header("Location: " . ROOT . "/usuario/listagem");
+            header("Location: " . ROUTES . "/usuario/listagem");
 
         }
 

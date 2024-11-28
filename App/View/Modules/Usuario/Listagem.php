@@ -8,9 +8,9 @@
 
         <title> Listagem de Usuários | Agenda Fatec </title>
 
-        <script defer type="text/javascript" src="<?= ROOT ?>/View/Assets/JS/Global.js">  </script>
+        <script defer type="text/javascript" src="<?= FILES ?>/View/Assets/JS/Global.js">  </script>
 
-        <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/View/Assets/CSS/Listagem.css">
+        <link rel="stylesheet" type="text/css" href="<?= FILES ?>/View/Assets/CSS/Listagem.css">
 
         <!-- Favicon (Global.js) -->
 
@@ -64,9 +64,9 @@
 
                                         <td> <?= $model[1][(int) $usuario->fk_cargo - 1]->nome ?> </td>
 
-                                        <td> <a href="<?= ROOT ?>/usuario/alternar_ativacao?id=<?= $usuario->id ?>&ativo=<?= $usuario->ativo ?>"> <?= ((bool) $usuario->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
+                                        <td> <a href="<?= ROUTES ?>/usuario/alternar_ativacao?id=<?= $usuario->id ?>&ativo=<?= $usuario->ativo ?>"> <?= ((bool) $usuario->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
 
-                                        <td> <a href="<?= ROOT ?>/usuario/reclassificar?id=<?= $usuario->id ?>&administrador=<?= $usuario->administrador ?>"> <?= (!((bool) $usuario->administrador)) ? "Promover" : "Rebaixar" ?> </a> </td>
+                                        <td> <a href="<?= ROUTES ?>/usuario/reclassificar?id=<?= $usuario->id ?>&administrador=<?= $usuario->administrador ?>"> <?= (!((bool) $usuario->administrador)) ? "Promover" : "Rebaixar" ?> </a> </td>
 
                                     </tr>
 

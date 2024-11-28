@@ -8,9 +8,9 @@
 
         <title> Início | Agenda Fatec </title>
 
-        <script defer type="text/javascript" src="<?= ROOT ?>/View/Assets/JS/Global.js">  </script>
+        <script defer type="text/javascript" src="<?= FILES ?>/View/Assets/JS/Global.js">  </script>
 
-        <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/View/Assets/CSS/Inicio.css">
+        <link rel="stylesheet" type="text/css" href="<?= FILES ?>/View/Assets/CSS/Inicio.css">
 
         <!-- Favicon (Global.js) -->
 
@@ -43,13 +43,13 @@
         
                     </article>
         
-                    <figure> <img src="<?= ROOT ?>/View/Assets/Images/Storyset/Inicio.svg" alt="Calendário"> </figure>
+                    <figure> <img src="<?= FILES ?>/View/Assets/Images/Storyset/Inicio.svg" alt="Calendário"> </figure>
         
                 </section>
 
                 <section id="about">
 
-                    <figure> <img src="<?= ROOT ?>/View/Assets/Images/Storyset/Sobre.svg" alt="Estudo"> </figure>
+                    <figure> <img src="<?= FILES ?>/View/Assets/Images/Storyset/Sobre.svg" alt="Estudo"> </figure>
 
                     <article>
         
@@ -93,7 +93,7 @@
         
                     </article>
 
-                    <figure> <img src="<?= ROOT ?>/View/Assets/Images/Storyset/Contato.svg" alt="Contatos"> </figure>
+                    <figure> <img src="<?= FILES ?>/View/Assets/Images/Storyset/Contato.svg" alt="Contatos"> </figure>
 
                 </section>
 

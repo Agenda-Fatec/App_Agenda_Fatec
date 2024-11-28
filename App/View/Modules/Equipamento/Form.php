@@ -8,9 +8,9 @@
 
         <title> Cadastro de Equipamento | Agenda Fatec </title>
 
-        <script defer type="text/javascript" src="<?= ROOT ?>/View/Assets/JS/Global.js">  </script>
+        <script defer type="text/javascript" src="<?= FILES ?>/View/Assets/JS/Global.js">  </script>
 
-        <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/View/Assets/CSS/Form.css">
+        <link rel="stylesheet" type="text/css" href="<?= FILES ?>/View/Assets/CSS/Form.css">
 
         <!-- Favicon (Global.js) -->
 
@@ -26,7 +26,7 @@
 
                     <h1> Cadastro de Equipamento </h1>
 
-                    <form action="<?= ROOT ?>/equipamento/salvar" method="post">
+                    <form action="<?= ROUTES ?>/equipamento/salvar" method="post">
 
                         <input type="hidden" id="id" name="id" value="<?= $model->id ?>">
 
@@ -38,7 +38,7 @@
 
                         <div id="buttons">
 
-                            <a href="<?= ROOT ?>/equipamento/listagem"> Cancelar </a>
+                            <a href="<?= ROUTES ?>/equipamento/listagem"> Cancelar </a>
                             <button type="reset"> Limpar </button>
                             <button type="submit"> Salvar </button>
 

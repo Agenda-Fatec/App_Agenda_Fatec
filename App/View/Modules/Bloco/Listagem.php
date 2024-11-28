@@ -8,9 +8,9 @@
 
         <title> Listagem de Blocos | Agenda Fatec </title>
 
-        <script defer type="text/javascript" src="<?= ROOT ?>/View/Assets/JS/Global.js">  </script>
+        <script defer type="text/javascript" src="<?= FILES ?>/View/Assets/JS/Global.js">  </script>
 
-        <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/View/Assets/CSS/Listagem.css">
+        <link rel="stylesheet" type="text/css" href="<?= FILES ?>/View/Assets/CSS/Listagem.css">
 
         <!-- Favicon (Global.js) -->
 
@@ -54,9 +54,9 @@
 
                                     <td> <?= $bloco->nome ?> </td>
 
-                                    <td> <a href="<?= ROOT ?>/bloco?id=<?= $bloco->id ?>"> Editar </a> </td>
+                                    <td> <a href="<?= ROUTES ?>/bloco?id=<?= $bloco->id ?>"> Editar </a> </td>
 
-                                    <td> <a href="<?= ROOT ?>/bloco/alternar_ativacao?id=<?= $bloco->id ?>&ativo=<?= $bloco->ativo ?>"> <?= ((bool) $bloco->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
+                                    <td> <a href="<?= ROUTES ?>/bloco/alternar_ativacao?id=<?= $bloco->id ?>&ativo=<?= $bloco->ativo ?>"> <?= ((bool) $bloco->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
 
                                 </tr>
 

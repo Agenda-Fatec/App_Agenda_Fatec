@@ -8,9 +8,9 @@
 
         <title> Salas da Fatec Jahu | Agenda Fatec </title>
 
-        <script defer type="text/javascript" src="<?= ROOT ?>/View/Assets/JS/Global.js">  </script>
+        <script defer type="text/javascript" src="<?= FILES ?>/View/Assets/JS/Global.js">  </script>
 
-        <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/View/Assets/CSS/Salas.css">
+        <link rel="stylesheet" type="text/css" href="<?= FILES ?>/View/Assets/CSS/Salas.css">
 
         <!-- Favicon (Global.js) -->
 
@@ -34,7 +34,7 @@
 
                         <?php if((bool) $sala->ativo): ?>
 
-                            <a class="room" href="<?= ROOT ?>/sala/descricao?id=<?= $sala->id ?>">
+                            <a class="room" href="<?= ROUTES ?>/sala/descricao?id=<?= $sala->id ?>">
 
                                 <h2 class="room-name"> <?= $sala->nome . " ($sala->numero)" ?> </h2>
 

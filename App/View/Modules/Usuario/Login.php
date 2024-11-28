@@ -8,9 +8,9 @@
 
         <title> Login | Agenda Fatec </title>
 
-        <script defer type="text/javascript" src="<?= ROOT ?>/View/Assets/JS/Global.js">  </script>
+        <script defer type="text/javascript" src="<?= FILES ?>/View/Assets/JS/Global.js">  </script>
 
-        <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/View/Assets/CSS/Acesso.css">
+        <link rel="stylesheet" type="text/css" href="<?= FILES ?>/View/Assets/CSS/Acesso.css">
 
         <!-- Favicon (Global.js) -->
 
@@ -24,9 +24,9 @@
 
                 <div id="form">
 
-                    <form action="<?= ROOT ?>/login/validar" method="post">
+                    <form action="<?= ROUTES ?>/login/validar" method="post">
 
-                        <figure> <img src="<?= ROOT ?>/View/Assets/Images/Storyset/Login.svg" alt="Login"> </figure>
+                        <figure> <img src="<?= FILES ?>/View/Assets/Images/Storyset/Login.svg" alt="Login"> </figure>
 
                         <section id="data">
 
@@ -38,13 +38,13 @@
 
                             <div id="buttons">
 
-                                <a href="<?= ROOT ?>/"> Cancelar </a>
+                                <a href="<?= ROUTES ?>/"> Cancelar </a>
                                 <button type="reset"> Limpar </button>
                                 <button type="submit"> Entrar </button>
 
                             </div>
 
-                            <a id="register" href="<?= ROOT ?>/cadastro"> Não possui um cadastro? Clique aqui. </a>
+                            <a id="register" href="<?= ROUTES ?>/cadastro"> Não possui um cadastro? Clique aqui. </a>
 
                         </section>
 
