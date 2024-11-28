@@ -8,9 +8,9 @@
 
         <title> Equipe de Desenvolvimento | Agenda Fatec </title>
 
-        <script defer type="text/javascript" src="<?= ROOT ?>/View/Assets/JS/Global.js">  </script>
+        <script defer type="text/javascript" src="<?= FILES ?>/View/Assets/JS/Global.js">  </script>
 
-        <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/View/Assets/CSS/Equipe.css">
+        <link rel="stylesheet" type="text/css" href="<?= FILES ?>/View/Assets/CSS/Equipe.css">
 
         <!-- Favicon (Global.js) -->
 
@@ -32,7 +32,7 @@
 
                     <div class="developer">
 
-                        <figure> <img src="<?= ROOT ?>/View/Assets/Images/Equipe/Arthur.jpg" alt="Arthur"> </figure>
+                        <figure> <img src="<?= FILES ?>/View/Assets/Images/Equipe/Arthur.jpg" alt="Arthur"> </figure>
 
                         <h2> Arthur Chagas da Costa </h2>
     
@@ -48,7 +48,7 @@
 
                     <div class="developer">
 
-                        <figure> <img src="<?= ROOT ?>/View/Assets/Images/Equipe/Deivide.jpg" alt="Arthur"> </figure>
+                        <figure> <img src="<?= FILES ?>/View/Assets/Images/Equipe/Deivide.jpg" alt="Arthur"> </figure>
 
                         <h2> Deivide Benedito dos Santos </h2>
     
@@ -64,7 +64,7 @@
 
                     <div class="developer">
 
-                        <figure> <img src="<?= ROOT ?>/View/Assets/Images/Equipe/Pablo.jpg" alt="Arthur"> </figure>
+                        <figure> <img src="<?= FILES ?>/View/Assets/Images/Equipe/Pablo.jpg" alt="Arthur"> </figure>
 
                         <h2> Pablo Valentin </h2>
     
@@ -80,7 +80,7 @@
 
                     <div class="developer">
 
-                        <figure> <img src="<?= ROOT ?>/View/Assets/Images/Equipe/Pedro.jpg" alt="Arthur"> </figure>
+                        <figure> <img src="<?= FILES ?>/View/Assets/Images/Equipe/Pedro.jpg" alt="Arthur"> </figure>
 
                         <h2> Pedro Henrique Lucatto </h2>
     
@@ -96,7 +96,7 @@
 
                     <div class="developer">
 
-                        <figure> <img src="<?= ROOT ?>/View/Assets/Images/Equipe/Thiago.jpg" alt="Arthur"> </figure>
+                        <figure> <img src="<?= FILES ?>/View/Assets/Images/Equipe/Thiago.jpg" alt="Arthur"> </figure>
 
                         <h2> Thiago Franca de Figueredo </h2>
     
@@ -112,7 +112,7 @@
 
                     <div class="developer">
 
-                        <figure> <img src="<?= ROOT ?>/View/Assets/Images/Equipe/Vinicius.jpg" alt="Arthur"> </figure>
+                        <figure> <img src="<?= FILES ?>/View/Assets/Images/Equipe/Vinicius.jpg" alt="Arthur"> </figure>
 
                         <h2> Vinícius Cruz Cassemira </h2>
     

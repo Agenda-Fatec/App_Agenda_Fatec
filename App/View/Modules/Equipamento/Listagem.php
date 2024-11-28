@@ -8,9 +8,9 @@
 
         <title> Listagem de Equipamentos | Agenda Fatec </title>
 
-        <script defer type="text/javascript" src="<?= ROOT ?>/View/Assets/JS/Global.js">  </script>
+        <script defer type="text/javascript" src="<?= FILES ?>/View/Assets/JS/Global.js">  </script>
 
-        <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/View/Assets/CSS/Listagem.css">
+        <link rel="stylesheet" type="text/css" href="<?= FILES ?>/View/Assets/CSS/Listagem.css">
 
         <!-- Favicon (Global.js) -->
 
@@ -54,9 +54,9 @@
 
                                     <td> <?= $equipamento->nome ?> </td>
 
-                                    <td> <a href="<?= ROOT ?>/equipamento?id=<?= $equipamento->id ?>"> Editar </a> </td>
+                                    <td> <a href="<?= ROUTES ?>/equipamento?id=<?= $equipamento->id ?>"> Editar </a> </td>
 
-                                    <td> <a href="<?= ROOT ?>/equipamento/alternar_ativacao?id=<?= $equipamento->id ?>&ativo=<?= $equipamento->ativo ?>"> <?= ((bool) $equipamento->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
+                                    <td> <a href="<?= ROUTES ?>/equipamento/alternar_ativacao?id=<?= $equipamento->id ?>&ativo=<?= $equipamento->ativo ?>"> <?= ((bool) $equipamento->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
 
                                 </tr>
 

@@ -41,7 +41,7 @@
 
             $model->Save();
 
-            header("Location: " . ROOT . "/cargo/listagem");
+            header("Location: " . ROUTES . "/cargo/listagem");
 
         }
 
@@ -54,7 +54,7 @@
 
             ((bool) $_GET["ativo"]) ? $model->Remove($id) : $model->Add($id);
 
-            header("Location: " . ROOT . "/cargo/listagem");
+            header("Location: " . ROUTES . "/cargo/listagem");
 
         }
 

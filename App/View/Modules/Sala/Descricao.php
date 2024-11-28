@@ -8,9 +8,9 @@
 
         <title> Descrição de Sala | Agenda Fatec </title>
 
-        <script defer type="text/javascript" src="<?= ROOT ?>/View/Assets/JS/Global.js">  </script>
+        <script defer type="text/javascript" src="<?= FILES ?>/View/Assets/JS/Global.js">  </script>
 
-        <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/View/Assets/CSS/Descricao.css">
+        <link rel="stylesheet" type="text/css" href="<?= FILES ?>/View/Assets/CSS/Descricao.css">
 
         <!-- Favicon (Global.js) -->
 

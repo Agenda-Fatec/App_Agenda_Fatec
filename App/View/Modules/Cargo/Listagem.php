@@ -8,9 +8,9 @@
 
         <title> Listagem de Cargos | Agenda Fatec </title>
 
-        <script defer type="text/javascript" src="<?= ROOT ?>/View/Assets/JS/Global.js">  </script>
+        <script defer type="text/javascript" src="<?= FILES ?>/View/Assets/JS/Global.js">  </script>
 
-        <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/View/Assets/CSS/Listagem.css">
+        <link rel="stylesheet" type="text/css" href="<?= FILES ?>/View/Assets/CSS/Listagem.css">
 
         <!-- Favicon (Global.js) -->
 
@@ -54,9 +54,9 @@
 
                                     <td> <?= $cargo->nome ?> </td>
 
-                                    <td> <a href="<?= ROOT ?>/cargo?id=<?= $cargo->id ?>"> Editar </a> </td>
+                                    <td> <a href="<?= ROUTES ?>/cargo?id=<?= $cargo->id ?>"> Editar </a> </td>
 
-                                    <td> <a href="<?= ROOT ?>/cargo/alternar_ativacao?id=<?= $cargo->id ?>&ativo=<?= $cargo->ativo ?>"> <?= ((bool) $cargo->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
+                                    <td> <a href="<?= ROUTES ?>/cargo/alternar_ativacao?id=<?= $cargo->id ?>&ativo=<?= $cargo->ativo ?>"> <?= ((bool) $cargo->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
 
                                 </tr>
 

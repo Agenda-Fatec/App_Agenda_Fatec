@@ -6,20 +6,20 @@
 
         <div id="access">
 
-            <?php if(parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH) === ROOT . "/sala/descricao"): ?>
+            <?php if(parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH) === ROUTES . "/sala/descricao"): ?>
 
-                <a href="<?= ROOT ?>/agendamento/novo?fk_sala=<?= $model[0]->id ?>"> Agendar </a>
+                <a href="<?= ROUTES ?>/agendamento/novo?fk_sala=<?= $model[0]->id ?>"> Agendar </a>
 
             <?php else: ?>
 
                 <?php if(count($_SESSION) > 0): ?>
 
-                    <a id="logout" href="<?= ROOT ?>/logout"> Sair </a>
+                    <a id="logout" href="<?= ROUTES ?>/logout"> Sair </a>
 
                 <?php else: ?>
 
-                    <a href="<?= ROOT ?>/cadastro"> Cadastro </a>
-                    <a href="<?= ROOT ?>/login"> Login </a>
+                    <a href="<?= ROUTES ?>/cadastro"> Cadastro </a>
+                    <a href="<?= ROUTES ?>/login"> Login </a>
 
                 <?php endif ?>
 
