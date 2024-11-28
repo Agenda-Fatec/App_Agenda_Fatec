@@ -26,7 +26,7 @@
 
                     <h1> Cadastro de Bloco </h1>
 
-                    <form action="<?= ROOT ?>/bloco/salvar">
+                    <form action="<?= ROOT ?>/bloco/salvar" method="post">
 
                         <input type="hidden" id="id" name="id" value="<?= $model->id ?>">
 

@@ -43,7 +43,7 @@
 
             $model->Save();
 
-            header("Location: " . ROOT . "/");
+            header("Location: " . ROOT . "/equipamento/listagem");
 
         }
 

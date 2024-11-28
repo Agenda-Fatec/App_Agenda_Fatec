@@ -26,7 +26,7 @@
 
                     <h1> Cadastro de Cargo </h1>
 
-                    <form action="<?= ROOT ?>/cargo/salvar">
+                    <form action="<?= ROOT ?>/cargo/salvar" method="post">
 
                         <input type="hidden" id="id" name="id" value="<?= $model->id ?>">
 

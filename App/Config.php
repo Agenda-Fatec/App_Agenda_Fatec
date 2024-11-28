@@ -6,7 +6,7 @@
 
     define("ROOT", ($_SERVER["HTTP_HOST"] === "localhost:8000") ? "" : "/App_Agenda_Fatec/App");
 
-    define("VIEWS", str_replace("\\", "/", dirname(__FILE__, 1) . "/View/Modules/"));
+    define("VIEWS", str_replace("\\", "/", dirname(__FILE__, 1)) . "/View/Modules/");
 
     // Banco de Dados.
 
