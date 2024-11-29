@@ -110,6 +110,9 @@
     min-width: 450px;
     max-height: 450px;
     max-width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 
 }
