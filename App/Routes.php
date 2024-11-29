@@ -25,6 +25,10 @@
             include VIEWS . "../Equipe.php";
         break;
 
+        case "/ajuda";
+            include VIEWS . "../Ajuda.php";
+        break;
+
         case "/cadastro":
             UsuarioController::Form("Cadastro");
         break;
@@ -59,10 +63,6 @@
 
         case "/agendamento/novo":
             AgendamentoController::Form();
-        break;
-
-        case "/ajuda";
-            include VIEWS . "Ajuda/index.php";
         break;
 
         default:
