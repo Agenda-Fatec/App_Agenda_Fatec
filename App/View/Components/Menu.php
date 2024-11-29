@@ -2,15 +2,16 @@
 
     <div id="menu">
 
-        <figure> <img src="<?= ROOT ?>/View/Assets/Images/Logo.png" alt="Logo"> </figure>
+        <figure> <img src="<?= ROUTES ?>/View/Assets/Images/Logo.png" alt="Logo"> </figure>
 
         <button id="close-menu"> Fechar Menu </button>
 
         <nav>
 
-            <a href="<?= ROOT ?>/"> Início </a>
-            <a href="<?= ROOT ?>/salas"> Salas </a>
-            <a href="<?= ROOT ?>/equipe"> Equipe </a>
+            <a href="<?= ROUTES ?>/"> Início </a>
+            <a href="<?= ROUTES ?>/salas"> Salas </a>
+            <a href="<?= ROUTES ?>/equipe"> Equipe </a>
+            <a href="<?= ROUTES ?>/ajuda"> Ajuda </a>
 
             <?php if(count($_SESSION) > 0 && (bool) $_SESSION["usuario"]["administrador"]): ?>
 
@@ -26,9 +27,9 @@
 
                             <summary> <?= $module . "s" ?> </summary>
 
-                            <a href="<?= ROOT ?>/<?= strtolower($module) ?>"> Cadastro </a>
+                            <a href="<?= ROUTES ?>/<?= strtolower($module) ?>"> Cadastro </a>
 
-                            <a href="<?= ROOT ?>/<?= strtolower($module) ?>/listagem"> Listagem </a>
+                            <a href="<?= ROUTES ?>/<?= strtolower($module) ?>/listagem"> Listagem </a>
 
                         </details>
 
@@ -38,7 +39,7 @@
 
                         <summary> Usuários </summary>
 
-                        <a href="<?= ROOT ?>/usuario/listagem"> Listagem </a>
+                        <a href="<?= ROUTES ?>/usuario/listagem"> Listagem </a>
 
                     </details>
 

@@ -8,9 +8,9 @@
 
         <title> Listagem de Salas | Agenda Fatec </title>
 
-        <script defer type="text/javascript" src="<?= ROOT ?>/View/Assets/JS/Global.js">  </script>
+        <script defer type="text/javascript" src="<?= FILES ?>/View/Assets/JS/Global.js">  </script>
 
-        <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/View/Assets/CSS/Listagem.css">
+        <link rel="stylesheet" type="text/css" href="<?= FILES ?>/View/Assets/CSS/Listagem.css">
 
         <!-- Favicon (Global.js) -->
 
@@ -62,9 +62,9 @@
 
                                     <td> <?= $model[1][(int) $sala->fk_bloco - 1]->nome ?> </td>
 
-                                    <td> <a href="<?= ROOT ?>/sala?id=<?= $sala->id ?>"> Editar </a> </td>
+                                    <td> <a href="<?= ROUTES ?>/sala?id=<?= $sala->id ?>"> Editar </a> </td>
 
-                                    <td> <a href="<?= ROOT ?>/sala/alternar_ativacao?id=<?= $sala->id ?>&ativo=<?= $sala->ativo ?>"> <?= ((bool) $sala->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
+                                    <td> <a href="<?= ROUTES ?>/sala/alternar_ativacao?id=<?= $sala->id ?>&ativo=<?= $sala->ativo ?>"> <?= ((bool) $sala->ativo) ? "Desativar" : "Ativar" ?> </a> </td>
 
                                 </tr>
 

@@ -14,7 +14,7 @@
 
     $url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 
-    switch(substr($url, strlen(ROOT)))
+    switch(substr($url, strlen(ROUTES)))
     {
 
         case "/":
@@ -23,6 +23,10 @@
 
         case "/equipe":
             include VIEWS . "../Equipe.php";
+        break;
+
+        case "/ajuda";
+            include VIEWS . "../Ajuda.php";
         break;
 
         case "/cadastro":
@@ -66,7 +70,7 @@
             if(count($_SESSION) > 0 && (bool) $_SESSION["usuario"]["administrador"])
             {
 
-                switch(substr($url, strlen(ROOT)))
+                switch(substr($url, strlen(ROUTES)))
                 {
 
                     case "/bloco":

@@ -8,9 +8,9 @@
 
         <title> Erro! </title>
 
-        <script defer type="text/javascript" src="<?= ROOT ?>/View/Assets/JS/Global.js">  </script>
+        <script defer type="text/javascript" src="<?= FILES ?>/View/Assets/JS/Global.js">  </script>
 
-        <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/View/Assets/CSS/Erro.css">
+        <link rel="stylesheet" type="text/css" href="<?= FILES ?>/View/Assets/CSS/Erro.css">
 
         <!-- Favicon (Global.js) -->
 
@@ -28,7 +28,7 @@
 
                 <section id="error">
 
-                    <figure> <img src="<?= ROOT ?>/View/Assets/Images/Favicon.png" alt="Ícone"> </figure>
+                    <figure> <img src="<?= FILES ?>/View/Assets/Images/Favicon.png" alt="Ícone"> </figure>
 
                     <h2> Página não encontrada! </h2>
 

@@ -43,7 +43,7 @@
 
             $model->Save();
 
-            header("Location: " . ROOT . "/bloco/listagem");
+            header("Location: " . ROUTES . "/bloco/listagem");
 
         }
 
@@ -56,7 +56,7 @@
 
             ((bool) $_GET["ativo"]) ? $model->Remove($id) : $model->Add($id);
 
-            header("Location: " . ROOT . "/bloco/listagem");
+            header("Location: " . ROUTES . "/bloco/listagem");
 
         }
 
