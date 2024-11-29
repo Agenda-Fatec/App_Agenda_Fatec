@@ -11,6 +11,7 @@
             <a href="<?= ROUTES ?>/"> Início </a>
             <a href="<?= ROUTES ?>/salas"> Salas </a>
             <a href="<?= ROUTES ?>/equipe"> Equipe </a>
+            <a href="<?= ROUTES ?>/ajuda"> Ajuda </a>
 
             <?php if(count($_SESSION) > 0 && (bool) $_SESSION["usuario"]["administrador"]): ?>
 

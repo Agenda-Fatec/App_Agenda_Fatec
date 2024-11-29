@@ -61,6 +61,10 @@
             AgendamentoController::Form();
         break;
 
+        case "/ajuda";
+            include VIEWS . "Ajuda/index.php";
+        break;
+
         default:
             
             if(count($_SESSION) > 0 && (bool) $_SESSION["usuario"]["administrador"])
