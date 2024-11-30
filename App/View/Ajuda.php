@@ -30,11 +30,11 @@
 
                     <h1> Ajuda </h1>
 
-                    <p> Confira, nesta página, alguns tópicos que podem ser úteis na utilização da aplicação. </p>
+                    <p> Confira nesta página, alguns tópicos que podem ser úteis na utilização da aplicação. </p>
 
                     <h1> Agendamento </h1>
 
-                    <p> Veja abaixo, os passos para agendar uma sala. </p>
+                    <p> Confira abaixo os passos para agendar uma sala: </p>
 
                     <section id="tutorial">
 
@@ -44,13 +44,23 @@
                             
                             <p>
                                 
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias dolorum voluptatem aspernatur. 
-                                Maiores temporibus sit dicta consequatur dolore, rem expedita delectus nostrum itaque quae reiciendis 
-                                hic perferendis harum debitis labore!
-                            
+                                Para agendar uma sala, você precisa ter um cadastro e estar logado em nosso site. Clique no botão Cadastro localizado no lado superior direito da tela, ou <a href="/cadastro">clique aqui</a> para realizar seu cadastro. 
+                        
                             </p>
                             
-                            <figure> <img src="<?php FILES ?>/View/Assets/Images/Logo.png" alt="Passo 01"> </figure>
+                            <p>
+                                
+                                Insira seu nome completo, seu e-mail institucional da Fatec, selecione sua relação com a instituição de ensino (se você é um professor ou aluno, por exemplo), defina uma senha de acesso e clique em cadastrar.
+                        
+                            </p>
+
+                            <p>
+
+                                Caso já possua o seu cadastro, passe para o próximo passo.
+
+                            </p>
+                            
+                            <figure> <img src="<?php FILES ?>/View/Assets/Images/ajuda/ajuda01.png" alt="Passo 01"> </figure>
 
                         </div>
 
@@ -60,13 +70,12 @@
                             
                             <p>
                                 
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias dolorum voluptatem aspernatur. 
-                                Maiores temporibus sit dicta consequatur dolore, rem expedita delectus nostrum itaque quae reiciendis 
-                                hic perferendis harum debitis labore!
+                                Caso possua um cadastro mas ainda não está logado, clique no botão de login localizado no lado superior direito da tela, ou <a href="/login">clique aqui</a> para fazer o login. 
+                                Insira seu e-mail institucional e sua senha (os mesmos que foram usados no cadastro) e clique em entrar. 
                             
                             </p>
                             
-                            <figure> <img src="<?php FILES ?>/View/Assets/Images/Logo.png" alt="Passo 02"> </figure>
+                            <figure> <img src="<?php FILES ?>/View/Assets/Images/ajuda/ajuda02.png" alt="Passo 02"> </figure>
 
                         </div>
 
@@ -76,13 +85,15 @@
 
                             <p>
                                 
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias dolorum voluptatem aspernatur. 
-                                Maiores temporibus sit dicta consequatur dolore, rem expedita delectus nostrum itaque quae reiciendis 
-                                hic perferendis harum debitis labore!
+                                Clique no ícone do menu, localizado no lado superior esquerdo, e clique em salas para visualizar todas as salas cadastradas no sistema. Após isso selecione a sala que deseja agendar.
                             
                             </p>
 
-                            <figure> <img src="<?php FILES ?>/View/Assets/Images/Logo.png" alt="Passo 03"> </figure>
+                            <p>
+                                <a href="/salas">clique aqui</a> para visitar a área de salas.
+                            </p>
+
+                            <figure> <img src="<?php FILES ?>/View/Assets/Images/ajuda/ajuda03.png" alt="Passo 03"> </figure>
 
                         </div>
 
@@ -92,13 +103,11 @@
 
                             <p>
                                 
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias dolorum voluptatem aspernatur. 
-                                Maiores temporibus sit dicta consequatur dolore, rem expedita delectus nostrum itaque quae reiciendis 
-                                hic perferendis harum debitis labore!
+                                Após ter selecionado a sala que deseja agendar, clique no botão agendar, no campo superior direito. Você será redirecionado para uma nova tela, onde deverá ser definido o dia e horário da utilização, além do Auxiliar de Docente do seu curso. Após isso clique em Requisitar.
                             
                             </p>
 
-                            <figure> <img src="<?php FILES ?>/View/Assets/Images/Logo.png" alt="Passo 04"> </figure>
+                            <figure> <img src="<?php FILES ?>/View/Assets/Images/ajuda/ajuda04.png" alt="Passo 04"> </figure>
 
                         </div>
 

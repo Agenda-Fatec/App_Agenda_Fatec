@@ -4,6 +4,11 @@
 
 /* Styles: */
 
+a{
+    text-decoration: none;
+    color: var(--contrast-color);
+}
+
 #help {
 
     height: auto;
