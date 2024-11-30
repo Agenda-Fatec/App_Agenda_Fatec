@@ -84,6 +84,10 @@
                         
                         </p>
 
+                        <p>
+                            <a style="text-decoration: none; color:var(--main-color);" href="/ajuda">Clique aqui</a> para consultar a tela de ajuda.
+                        </p>
+
                         <div id="links">
 
                             <a target="_blank" href="https://github.com/Agenda-Fatec"> <i class="bx bxl-github">  </i> </a>
