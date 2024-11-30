@@ -1,192 +1,237 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
+<head>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title> Dúvidas | Agenda Fatec </title>
+    <title> Dúvidas | Agenda Fatec </title>
 
-        <script defer type="text/javascript" src="<?= FILES ?>/View/Assets/JS/Global.js">  </script>
+    <script defer type="text/javascript" src="<?= FILES ?>/View/Assets/JS/Global.js">  </script>
 
-        <link rel="stylesheet" type="text/css" href="<?= FILES ?>/View/Assets/CSS/Ajuda.css">
+    <link rel="stylesheet" type="text/css" href="<?= FILES ?>/View/Assets/CSS/Ajuda.css">
 
-        <!-- Favicon (Global.js) -->
+    <!-- Favicon (Global.js) -->
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <?php include VIEWS . "../Components/Menu.php" ?>
+    <?php include VIEWS . "../Components/Menu.php" ?>
 
-        <div id="container">
+    <div id="container">
 
-            <?php include VIEWS . "../Components/Header.php" ?>
+        <?php include VIEWS . "../Components/Header.php" ?>
 
-            <main>
+        <main>
 
-                <section id="help">
+            <section id="help">
 
-                    <h1> Ajuda </h1>
+                <h1> Ajuda </h1>
 
-                    <p> Confira nesta página, alguns tópicos que podem ser úteis na utilização da aplicação. </p>
+                <p> Como realizar cadastro ou agendamento? </p>
 
-                    <h1> Agendamento </h1>
+                <h1> Cadastro </h1>
 
-                    <p> Confira abaixo os passos para agendar uma sala: </p>
+                <p>
 
-                    <section id="tutorial">
+                    Para agendar uma sala, é preciso ter cadastro e logar no site.
 
-                        <div class="tutorial-step">
+                </p>
 
-                            <h2> Passo 01: crie seu cadastro. </h2>
-                            
-                            <p>
-                                
-                                Para agendar uma sala, você precisa ter um cadastro e estar logado em nosso site. Clique no botão Cadastro localizado no lado superior direito da tela, ou <a href="/cadastro">clique aqui</a> para realizar seu cadastro. 
-                        
-                            </p>
-                            
-                            <p>
-                                
-                                Insira seu nome completo, seu e-mail institucional da Fatec, selecione sua relação com a instituição de ensino (se você é um professor ou aluno, por exemplo), defina uma senha de acesso e clique em cadastrar.
-                        
-                            </p>
+                <section id="tutorial">
 
-                            <p>
+                    <div class="tutorial-step">
 
-                                Caso já possua o seu cadastro, passe para o próximo passo.
+                        <h2> Passo 01: Crie seu cadastro. </h2>
 
-                            </p>
-                            
-                            <figure> <img src="<?php FILES ?>/View/Assets/Images/ajuda/ajuda01.png" alt="Passo 01"> </figure>
+                        <ul>
 
-                        </div>
+                            <li>
+                                Clique no botão <a href="/cadastro">Cadastro</a>. <span>(Localizado no lado
+                                    superior direito)</span>
+                            </li>
+                            <li>
+                                Digite seu nome completo.
+                            </li>
+                            <li>
+                                Digite seu e-mail institucional da Fatec.
+                            </li>
+                            <li>
+                                Selecione sua relação com a Fatec. <span>(professor ou aluno, por exemplo)</span>
+                            </li>
+                            <li>
+                                Defina uma senha
+                            </li>
+                            <li>Clique em cadastrar.</li>
 
-                        <div class="tutorial-step">
+                        </ul>
 
-                            <h2> Passo 02: faça login na aplicação. </h2>
-                            
-                            <p>
-                                
-                                Caso possua um cadastro mas ainda não está logado, clique no botão de login localizado no lado superior direito da tela, ou <a href="/login">clique aqui</a> para fazer o login. 
-                                Insira seu e-mail institucional e sua senha (os mesmos que foram usados no cadastro) e clique em entrar. 
-                            
-                            </p>
-                            
-                            <figure> <img src="<?php FILES ?>/View/Assets/Images/ajuda/ajuda02.png" alt="Passo 02"> </figure>
-
-                        </div>
-
-                        <div class="tutorial-step">
-
-                            <h2> Passo 03: vá até a página de listagem de salas. </h2>
-
-                            <p>
-                                
-                                Clique no ícone do menu, localizado no lado superior esquerdo, e clique em salas para visualizar todas as salas cadastradas no sistema. Após isso selecione a sala que deseja agendar.
-                            
-                            </p>
-
-                            <p>
-                                <a href="/salas">clique aqui</a> para visitar a área de salas.
-                            </p>
-
-                            <figure> <img src="<?php FILES ?>/View/Assets/Images/ajuda/ajuda03.png" alt="Passo 03"> </figure>
-
-                        </div>
-
-                        <div class="tutorial-step">
-
-                            <h2> Passo 04: requisite uma sala para utilização. </h2>
-
-                            <p>
-                                
-                                Após ter selecionado a sala que deseja agendar, clique no botão agendar, no campo superior direito. Você será redirecionado para uma nova tela, onde deverá ser definido o dia e horário da utilização, além do Auxiliar de Docente do seu curso. Após isso clique em Requisitar.
-                            
-                            </p>
-
-                            <figure> <img src="<?php FILES ?>/View/Assets/Images/ajuda/ajuda04.png" alt="Passo 04"> </figure>
-
-                        </div>
+                        <figure> <img src="<?php FILES ?>/View/Assets/Images/ajuda/ajuda01.png" alt="Passo 01">
+                        </figure>
 
                         <p>
-                            
-                            Pronto! Você requisitou uma sala. Basta aguardar a confirmação de um administrador. Você será notificado pelo 
-                            seu e-mail institucional sobre o andamento. Tenha em mente que a requisição pode ser recusada.
-                        
+
+                            Caso já possua cadastro, passe para o próximo passo.
+
                         </p>
 
-                    </section>
+                    </div>
 
-                    <h1> Contato </h1>
+                    <div class="tutorial-step">
 
-                    <p> Possui uma dúvida que não foi abordada? Tem alguma sugestão? Envie-nos um e-mail. </p>
+                        <h1> Agendamento </h1>
 
-                    <section id="contact">
-                        
-                        <form action="#">
+                        <h2> Passo 02: Logando no site. </h2>
 
-                            <label for="nome"> Insira seu nome: </label>
-                            <input type="text" id="nome" name="nome" required>
+                        <ul>
+                            <li>
+                                Clique no botão <a href="/login">Login</a>. <span>(Localizado no lado superior
+                                    direito)</span>
+                            </li>
+                            <li>
+                                Digite seu e-mail Fatec cadastrado.
+                            </li>
+                            <li>
+                                Digite a senha cadastrada.
+                            </li>
+                            <li>Clique em Entrar.</li>
 
-                            <label for="email_rementente"> Insira seu e-mail: </label>
-                            <input type="email" id="email_rementente" name="email_rementente" required>
+                        </ul>
 
-                            <label for="email_destinatario"> Insira o e-mail do destinatário: </label>
-                            <input type="email" id="email_destinatario" name="email_destinatario" value="vinicius.cassemira@fatec.sp.gov.br" required>
+                        <figure> <img src="<?php FILES ?>/View/Assets/Images/ajuda/ajuda02.png" alt="Passo 02">
+                        </figure>
 
-                            <label for="assunto"> Insira o assunto da mensagem: </label>
-                            <input type="text" id="assunto" name="assunto" required>
+                    </div>
 
-                            <label for="mensagem"> Insira a mensagem: </label>
-                            <textarea id="mensagem" name="mensagem" maxlength="255" required></textarea>
+                    <div class="tutorial-step">
 
-                            <div id="buttons">
+                        <h2> Passo 03: Listar salas. </h2>
 
-                                <button type="reset"> Limpar </button>
+                        <!-- apagarrr de cima-->
+                        <ul>
+                            <li>
+                                Clique no ícone do menu. <span>(Localizado no lado superior
+                                    esquerdo)</span>
+                            </li>
+                            <li>
+                                Clique em <a href="/salas">Salas</a>.
+                            </li>
+                            <li>
+                                Selecione a sala desejada.
+                            </li>
+                            <li>
+                                Clique no botão Agendar <span>(Localizado no lado superior direito)</span>
+                            </li>
 
-                                <button type="submit"> Enviar </button>
+                        </ul>
 
-                            </div>
+                        <figure> <img src="<?php FILES ?>/View/Assets/Images/ajuda/ajuda03.png" alt="Passo 03">
+                        </figure>
 
-                        </form>
+                    </div>
 
-                    </section>
-                    
+                    <div class="tutorial-step">
+
+                        <h2> Passo 04: Requisitando sala. </h2>
+
+                        <ul>
+                            <li>
+                                Escolha a data e horário que deseja agendar.
+                            </li>
+                            <li>
+                                Escolha o auxiliar de docente do seu curso.
+                            </li>
+                            <li>
+                                Clique em Requisitar.
+                            </li>
+                        </ul>
+
+                        <figure> <img src="<?php FILES ?>/View/Assets/Images/ajuda/ajuda04.png" alt="Passo 04">
+                        </figure>
+
+                    </div>
+
+                    <p>
+
+                        Pronto! Você requisitou uma sala. Basta aguardar a confirmação de um administrador. Você será
+                        notificado pelo
+                        seu e-mail institucional sobre o andamento.
+                        <br /><span>(A depender de vários fatores, sua requisição pode ser aprovada ou recusada.)</span>
+
+                    </p>
+
                 </section>
 
-            </main>
+                <h1> Contato </h1>
 
-        </div>
+                <p> Possui uma dúvida que não foi abordada? Tem alguma sugestão? Envie-nos um e-mail. </p>
 
-        <script type="text/javascript">
+                <section id="contact">
 
-            document.querySelector("form").onsubmit = function(event) {
+                    <form action="#">
 
-                event.preventDefault();
+                        <label for="nome"> Insira seu nome: </label>
+                        <input type="text" id="nome" name="nome" required>
 
-                const data = new FormData(event.target);
+                        <label for="email_rementente"> Insira seu e-mail: </label>
+                        <input type="email" id="email_rementente" name="email_rementente" required>
 
-                const name = data.get("nome").trim();
+                        <label for="email_destinatario"> Insira o e-mail do destinatário: </label>
+                        <input type="email" id="email_destinatario" name="email_destinatario"
+                            value="vinicius.cassemira@fatec.sp.gov.br" required>
 
-                const sender_email = data.get("email_rementente").trim();
+                        <label for="assunto"> Insira o assunto da mensagem: </label>
+                        <input type="text" id="assunto" name="assunto" required>
 
-                const recipient_email = data.get("email_destinatario").trim();
+                        <label for="mensagem"> Insira a mensagem: </label>
+                        <textarea id="mensagem" name="mensagem" maxlength="255" required></textarea>
 
-                const subject = data.get("assunto").trim();
+                        <div id="buttons">
 
-                const message = data.get("mensagem").trim().concat("%0D%0A%0D%0A");
+                            <button type="reset"> Limpar </button>
 
-                const link = `${recipient_email}?subject=${subject}&body=${message}(${name} | ${sender_email}).`;
+                            <button type="submit"> Enviar </button>
 
-                window.open("mailto:".concat(link));
+                        </div>
 
-            }
+                    </form>
 
-        </script>
+                </section>
 
-    </body>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script type="text/javascript">
+
+        document.querySelector("form").onsubmit = function (event) {
+
+            event.preventDefault();
+
+            const data = new FormData(event.target);
+
+            const name = data.get("nome").trim();
+
+            const sender_email = data.get("email_rementente").trim();
+
+            const recipient_email = data.get("email_destinatario").trim();
+
+            const subject = data.get("assunto").trim();
+
+            const message = data.get("mensagem").trim().concat("%0D%0A%0D%0A");
+
+            const link = `${recipient_email}?subject=${subject}&body=${message}(${name} | ${sender_email}).`;
+
+            window.open("mailto:".concat(link));
+
+        }
+
+    </script>
+
+</body>
 
 </html>
