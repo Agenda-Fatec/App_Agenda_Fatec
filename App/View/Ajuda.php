@@ -34,7 +34,7 @@
 
                     <h1> Agendamento </h1>
 
-                    <p> Confira abaixo os passos para agendar uma sala: </p>
+                    <p> Veja abaixo, os passos para agendar uma sala (Utilize as imagens para se guiar melhor.): </p>
 
                     <section id="tutorial">
 
@@ -43,24 +43,37 @@
                             <h2> Passo 01: crie seu cadastro. </h2>
                             
                             <p>
-                                
-                                Para agendar uma sala, você precisa ter um cadastro e estar logado em nosso site. Clique no botão Cadastro localizado no lado superior direito da tela, ou <a href="/cadastro">clique aqui</a> para realizar seu cadastro. 
-                        
+
+                                Para requistar uma sala para utilização, você precisa ter um cadastro. 
+                                Clique no botão "Cadastro", localizado no canto superior direito da tela, ou 
+                                <a href="/cadastro"> clique aqui </a> para realizá-lo.
+                                <br><br>
+                                Ao entrar na página de cadastro, preencha os campos com os seguintes dados:
+
                             </p>
+
+                            <table>
+                                
+                                <tbody>
+
+                                    <tr> <td> Seu nome completo; </td> </tr>
+                                    <tr> <td> Seu e-mail institucional da Fatec; </td> </tr>
+                                    <tr> <td> Sua relação com a instituição de ensino (Aluno, professor, etc.); </td> </tr>
+                                    <tr> <td> Uma senha para sua conta. </td> </tr>
+
+                                </tbody>
+                            
+                            </table>
                             
                             <p>
-                                
-                                Insira seu nome completo, seu e-mail institucional da Fatec, selecione sua relação com a instituição de ensino (se você é um professor ou aluno, por exemplo), defina uma senha de acesso e clique em cadastrar.
-                        
-                            </p>
 
-                            <p>
-
-                                Caso já possua o seu cadastro, passe para o próximo passo.
+                                Após isso, clique no botão "Cadastrar".
+                                <br><br>
+                                Caso já possua o seu cadastro, avançe para o próximo passo.
 
                             </p>
                             
-                            <figure> <img src="<?php FILES ?>/View/Assets/Images/ajuda/ajuda01.png" alt="Passo 01"> </figure>
+                            <figure> <img src="<?= FILES ?>/View/Assets/Images/Telas/Cadastro.png" alt="Passo 01"> </figure>
 
                         </div>
 
@@ -70,12 +83,32 @@
                             
                             <p>
                                 
-                                Caso possua um cadastro mas ainda não está logado, clique no botão de login localizado no lado superior direito da tela, ou <a href="/login">clique aqui</a> para fazer o login. 
-                                Insira seu e-mail institucional e sua senha (os mesmos que foram usados no cadastro) e clique em entrar. 
+                                Caso já possua um cadastro, mas ainda não esteja logado, clique no botão "Login", 
+                                localizado no canto superior direito da tela, ou <a href="/login"> clique aqui </a> 
+                                para fazê-lo.
+                                <br><br>
+                                Ao entrar na página de login, preencha os campos com os seguintes dados:
                             
                             </p>
+
+                            <table>
+                                    
+                                <tbody>
+
+                                    <tr> <td> Seu e-mail institucional da Fatec; </td> </tr>
+                                    <tr> <td> Sua senha. </td> </tr>
+
+                                </tbody>
                             
-                            <figure> <img src="<?php FILES ?>/View/Assets/Images/ajuda/ajuda02.png" alt="Passo 02"> </figure>
+                            </table>
+
+                            <p>
+
+                                Lembre-se que você deve inserir o mesmo e-mail e a mesma senha de quando se cadastrou.
+
+                            </p>
+                            
+                            <figure> <img src="<?= FILES ?>/View/Assets/Images/Telas/Login.png" alt="Passo 02"> </figure>
 
                         </div>
 
@@ -85,15 +118,15 @@
 
                             <p>
                                 
-                                Clique no ícone do menu, localizado no lado superior esquerdo, e clique em salas para visualizar todas as salas cadastradas no sistema. Após isso selecione a sala que deseja agendar.
+                                Clique no ícone do menu, localizado no canto superior esquerdo, e após o menu aparecer na tela, 
+                                clique em "Salas" para visualizar todas as salas cadastradas no sistema. Após isso, clique na 
+                                sala que deseja requisitar.
+                                <br><br>
+                                Para ser redirecionado automaticamente até a página de listagem de salas, <a href="/salas"> clique aqui </a>.
                             
                             </p>
 
-                            <p>
-                                <a href="/salas">clique aqui</a> para visitar a área de salas.
-                            </p>
-
-                            <figure> <img src="<?php FILES ?>/View/Assets/Images/ajuda/ajuda03.png" alt="Passo 03"> </figure>
+                            <figure> <img src="<?= FILES ?>/View/Assets/Images/Telas/Salas.png" alt="Passo 03"> </figure>
 
                         </div>
 
@@ -103,11 +136,41 @@
 
                             <p>
                                 
-                                Após ter selecionado a sala que deseja agendar, clique no botão agendar, no campo superior direito. Você será redirecionado para uma nova tela, onde deverá ser definido o dia e horário da utilização, além do Auxiliar de Docente do seu curso. Após isso clique em Requisitar.
+                                Após ter selecionado a sala que deseja requisitar, uma nova página será aberta, onde serão listados os 
+                                equipamentos da sala escolhida. Após a abertura da mesma, clique no botão "Agendar", no canto superior direito.
                             
                             </p>
 
-                            <figure> <img src="<?php FILES ?>/View/Assets/Images/ajuda/ajuda04.png" alt="Passo 04"> </figure>
+                            <figure> <img src="<?= FILES ?>/View/Assets/Images/Telas/Descricao.png" alt="Passo 04"> </figure>
+
+                            <p>
+                                
+                                Após clicar no botão "Agendar" você será redirecionado a uma outra página, onde devem ser passados 
+                                os seguintes dados:
+                            
+                            </p>
+
+                            <table>
+                                
+                                <tbody>
+
+                                    <tr> <td> Sala que está sendo requisitada (Preenchido automaticamente.); </td> </tr>
+                                    <tr> <td> Dia de utilização desejado; </td> </tr>
+                                    <tr> <td> Hora inicial da utilização da sala; </td> </tr>
+                                    <tr> <td> Hora final da utilização da sala; </td> </tr>
+                                    <tr> <td> Quem deve confirmar esta requisição de utilização de sala. </td> </tr>
+
+                                </tbody>
+                            
+                            </table>
+
+                            <p>
+
+                                Após isso, clique no botão "Requisitar" e espere uma confirmação de um administrador.
+
+                            </p>
+
+                            <figure> <img src="<?= FILES ?>/View/Assets/Images/Telas/Agendamento.png" alt="Passo 04"> </figure>
 
                         </div>
 

@@ -14,4 +14,5 @@ INSERT INTO Sala_Equipamento_Assoc(fk_sala, fk_equipamento, quantidade) VALUES(4
 INSERT INTO Sala_Equipamento_Assoc(fk_sala, fk_equipamento, quantidade) VALUES(5, 1, 2),(5, 2, 30),(5, 3, 40);
 INSERT INTO Sala_Equipamento_Assoc(fk_sala, fk_equipamento, quantidade) VALUES(6, 1, 2),(6, 2, 30),(6, 3, 40);
 
-INSERT INTO Usuario(nome, email, senha, administrador, fk_cargo) VALUES("Pablo Valentin", "pablo.valentin@fatec.sp.gov.br", MD5("1234"), 1, 1);
+INSERT INTO Usuario(nome, email, senha, administrador, fk_cargo) VALUES("Pablo Valentin", "pablo.valentin@fatec.sp.gov.br", MD5("1234"), 0, 1);
+INSERT INTO Usuario(nome, email, senha, administrador, fk_cargo) VALUES("Matheus", "matheus@fatec.sp.gov.br", MD5("1234"), 1, 3);
