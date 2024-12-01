@@ -65,6 +65,10 @@
             AgendamentoController::Form();
         break;
 
+        case "/agendamento/salvar":
+            AgendamentoController::Save();
+        break;
+
         default:
             
             if(count($_SESSION) > 0 && (bool) $_SESSION["usuario"]["administrador"])
@@ -72,6 +76,10 @@
 
                 switch(substr($url, strlen(ROUTES)))
                 {
+
+                    case "/agendamento/listagem":
+                        AgendamentoController::List();
+                    break;
 
                     case "/bloco":
                         BlocoController::Form();
