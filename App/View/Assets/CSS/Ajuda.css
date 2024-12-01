@@ -4,11 +4,6 @@
 
 /* Styles: */
 
-a{
-    text-decoration: none;
-    color: var(--contrast-color);
-}
-
 #help {
 
     height: auto;
@@ -74,11 +69,38 @@ a{
 
 }
 
+#help #tutorial .tutorial-step p a {
+
+    text-decoration: none;
+    color: var(--contrast-color);
+    transition: 0.5s;
+
+}
+
+#help #tutorial .tutorial-step p a:hover {
+
+    color: var(--main-color);
+
+}
+
+#help #tutorial .tutorial-step table {
+
+    border-spacing: 10px;
+    
+}
+
+#help #tutorial .tutorial-step table tbody td {
+
+    border: 1px solid var(--neutral-color);
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    
+}
+
 #help #tutorial .tutorial-step figure {
 
-    min-height: 300px;
     min-width: 450px;
-    max-height: 300px;
     max-width: 450px;
     display: flex;
     align-items: center;
@@ -201,9 +223,7 @@ a{
 
     #help #tutorial .tutorial-step figure {
 
-        min-height: 200px;
         min-width: 300px;
-        max-height: 200px;
         max-width: 300px;
     
     }

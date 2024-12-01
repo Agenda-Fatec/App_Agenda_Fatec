@@ -2,7 +2,7 @@
 
     <div id="menu">
 
-        <figure> <img src="<?= ROUTES ?>/View/Assets/Images/Logo.png" alt="Logo"> </figure>
+        <figure> <img src="<?= FILES ?>/View/Assets/Images/Logo.png" alt="Logo"> </figure>
 
         <button id="close-menu"> Fechar Menu </button>
 
