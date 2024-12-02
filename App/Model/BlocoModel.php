@@ -27,12 +27,35 @@
             
         }
 
-        public function Save() : void
+        public function Save() : bool
         {
 
             $dao = new BlocoDAO();
 
-            ($this->id === 0) ? $dao->Insert($this) : $dao->Update($this);
+            $valor_duplicado = false;
+
+            foreach($dao->FindRepetition($this->nome) as $bloco)
+            {
+
+                if($bloco->id !== $this->id && $bloco->nome === $this->nome)
+                {
+
+                    $valor_duplicado = true;
+
+                    break;
+
+                }
+
+            }
+
+            if(!$valor_duplicado)
+            {
+
+                ($this->id === 0) ? $dao->Insert($this) : $dao->Update($this);
+
+            }
+
+            return $valor_duplicado;
 
         }
 

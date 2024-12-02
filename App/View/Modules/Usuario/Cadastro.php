@@ -31,10 +31,10 @@
                         <section id="data">
 
                             <label for="nome"> Digite seu nome completo: </label>
-                            <input type="text" id="nome" name="nome" maxlength="255" required>
+                            <input type="text" id="nome" name="nome" maxlength="255" autocomplete="off" required>
 
                             <label for="email"> Digite seu e-mail institucional: </label>
-                            <input type="email" id="email" name="email" maxlength="100" required>
+                            <input type="email" id="email" name="email" maxlength="100" autocomplete="off" required>
 
                             <label for="fk_cargo"> Defina sua relação com a instituição de ensino: </label>
                             <select id="fk_cargo" name="fk_cargo" required>
@@ -52,10 +52,10 @@
                             </select>
 
                             <label for="senha"> Crie uma senha: </label>
-                            <input type="password" id="senha" name="senha" maxlength="20" required>
+                            <input type="password" id="senha" name="senha" minlength="4" maxlength="20" required>
 
                             <label for="confirmacao_senha"> Confirme sua senha: </label>
-                            <input type="password" id="confirmacao_senha" name="confirmacao_senha" maxlength="20" required>
+                            <input type="password" id="confirmacao_senha" name="confirmacao_senha" minlength="4" maxlength="20" required>
 
                             <div id="buttons">
 

@@ -52,9 +52,19 @@
 
             $model->fk_bloco = (int) $_POST["fk_bloco"];
 
-            $model->Save();
+            if(!$model->Save())
+            {
 
-            header("Location: " . ROUTES . "/sala/listagem");
+                header("Location: " . ROUTES . "/sala/listagem");
+
+            }
+
+            else
+            {
+
+                parent::Alert("Já existe uma sala cadastrada com este nome ou este número! Troque o necessário e tente novamente.", "/sala/listagem");
+
+            }
 
         }
 

@@ -31,7 +31,7 @@
                         <section id="data">
 
                             <label for="email"> Digite seu e-mail institucional: </label>
-                            <input type="email" id="email" name="email" maxlength="50" required>
+                            <input type="email" id="email" name="email" maxlength="100" autocomplete="off" required>
 
                             <label for="senha"> Digite sua senha do Agenda Fatec: </label>
                             <input type="password" id="senha" name="senha" maxlength="20" required>

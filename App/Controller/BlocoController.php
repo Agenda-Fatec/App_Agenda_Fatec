@@ -41,9 +41,19 @@
 
             $model->descricao = $_POST["descricao"];
 
-            $model->Save();
+            if(!$model->Save())
+            {
 
-            header("Location: " . ROUTES . "/bloco/listagem");
+                header("Location: " . ROUTES . "/bloco/listagem");
+
+            }
+
+            else
+            {
+
+                parent::Alert("Já existe um bloco cadastrado com este nome! Troque-o e tente novamente.", "/bloco/listagem");
+
+            }
 
         }
 

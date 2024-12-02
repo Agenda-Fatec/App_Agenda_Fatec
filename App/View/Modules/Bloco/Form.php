@@ -31,7 +31,7 @@
                         <input type="hidden" id="id" name="id" value="<?= $model->id ?>">
 
                         <label for="nome"> Nome: </label>
-                        <input type="text" id="nome" name="nome" value="<?= $model->nome ?>">
+                        <input type="text" id="nome" name="nome" value="<?= $model->nome ?>" maxlength="255" autocomplete="off">
 
                         <label for="descricao"> Descrição: </label>
                         <textarea id="descricao" name="descricao" maxlength="255"><?= $model->descricao ?></textarea>

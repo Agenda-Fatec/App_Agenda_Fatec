@@ -30,6 +30,8 @@
 
                     <h1> Listagem de Equipamentos </h1>
 
+                    <a id="new-register" href="<?= ROUTES ?>/equipamento">  Adicionar </a>
+
                     <table>
                         
                         <thead>

@@ -100,6 +100,21 @@
 
         }
 
+        public function FindRepetition(string $nome) : array
+        {
+
+            $sql = "SELECT * FROM Equipamento WHERE nome = ?";
+
+            $stmt = $this->connection->prepare($sql);
+
+            $stmt->bindValue(1, $nome);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(DAO::FETCH_CLASS, "App\Model\EquipamentoModel");
+
+        }
+
     }
 
 ?>

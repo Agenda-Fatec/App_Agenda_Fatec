@@ -33,23 +33,35 @@
             
         }
 
-        public function Save() : void
+        public function Save() : bool
         {
 
             $dao = new UsuarioDAO();
 
-            ($this->id === 0) ? $dao->Insert($this) : $dao->Update($this);
+            $valor_duplicado = false;
 
-        }
+            foreach($dao->FindRepetition($this->email) as $usuario)
+            {
 
-        public function Login() : bool
-        {
+                if($usuario->id !== $this->id && $usuario->nome === $this->email)
+                {
 
-            $dao = new UsuarioDAO();
+                    $valor_duplicado = true;
 
-            $this->data = $dao->Login($this);
+                    break;
 
-            return (gettype($this->data) === "object" && (bool) $this->data->ativo);
+                }
+
+            }
+
+            if(!$valor_duplicado)
+            {
+
+                ($this->id === 0) ? $dao->Insert($this) : $dao->Update($this);
+
+            }
+
+            return $valor_duplicado;
 
         }
 
@@ -64,13 +76,6 @@
         {
 
             (new UsuarioDAO())->Deactive($id);
-
-        }
-
-        public function Reclassify(int $id, int $condition) : void
-        {
-
-            (new UsuarioDAO())->Reclassify($id, $condition);
 
         }
 
@@ -89,6 +94,24 @@
                 $this->data = new UsuarioModel();
 
             }
+
+        }
+
+        public function Login() : bool
+        {
+
+            $dao = new UsuarioDAO();
+
+            $this->data = $dao->Login($this);
+
+            return (gettype($this->data) === "object" && (bool) $this->data->ativo);
+
+        }
+
+        public function Reclassify(int $id, int $condition) : void
+        {
+
+            (new UsuarioDAO())->Reclassify($id, $condition);
 
         }
 
