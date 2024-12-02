@@ -30,6 +30,8 @@
 
                     <h1> Listagem de Cargos </h1>
 
+                    <a id="new-register" href="<?= ROUTES ?>/cargo">  Adicionar </a>
+
                     <table>
                         
                         <thead>
