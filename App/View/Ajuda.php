@@ -180,16 +180,16 @@
                         <form action="#">
 
                             <label for="nome"> Insira seu nome: </label>
-                            <input type="text" id="nome" name="nome" required>
+                            <input type="text" id="nome" name="nome" maxlength="255" autocomplete="off" required>
 
                             <label for="email_rementente"> Insira seu e-mail: </label>
-                            <input type="email" id="email_rementente" name="email_rementente" required>
+                            <input type="email" id="email_rementente" name="email_rementente" maxlength="100" autocomplete="off" required>
 
                             <label for="email_destinatario"> Insira o e-mail do destinatário: </label>
-                            <input type="email" id="email_destinatario" name="email_destinatario" value="vinicius.cassemira@fatec.sp.gov.br" required>
+                            <input type="email" id="email_destinatario" name="email_destinatario" value="vinicius.cassemira@fatec.sp.gov.br" maxlength="100" autocomplete="off" required>
 
                             <label for="assunto"> Insira o assunto da mensagem: </label>
-                            <input type="text" id="assunto" name="assunto" required>
+                            <input type="text" id="assunto" name="assunto" maxlength="50" autocomplete="off" required>
 
                             <label for="mensagem"> Insira a mensagem: </label>
                             <textarea id="mensagem" name="mensagem" maxlength="255" required></textarea>
