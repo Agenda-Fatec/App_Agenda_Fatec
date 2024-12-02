@@ -52,18 +52,14 @@
 
                             </p>
 
-                            <table>
-                                
-                                <tbody>
+                            <ul>
 
-                                    <tr> <td> Seu nome completo; </td> </tr>
-                                    <tr> <td> Seu e-mail institucional da Fatec; </td> </tr>
-                                    <tr> <td> Sua relação com a instituição de ensino (Aluno, professor, etc.); </td> </tr>
-                                    <tr> <td> Uma senha para sua conta. </td> </tr>
-
-                                </tbody>
+                                <li> <i class="bx bxs-square">  </i> Seu nome completo; </li>
+                                <li> <i class="bx bxs-square">  </i> Seu e-mail institucional da Fatec; </li>
+                                <li> <i class="bx bxs-square">  </i> Sua relação com a instituição de ensino (Aluno, professor, etc.); </li>
+                                <li> <i class="bx bxs-square">  </i> Uma senha para sua conta. </li>
                             
-                            </table>
+                            </ul>
                             
                             <p>
 
@@ -91,16 +87,12 @@
                             
                             </p>
 
-                            <table>
-                                    
-                                <tbody>
+                            <ul>
 
-                                    <tr> <td> Seu e-mail institucional da Fatec; </td> </tr>
-                                    <tr> <td> Sua senha. </td> </tr>
-
-                                </tbody>
+                                <li> <i class="bx bxs-square">  </i> Seu e-mail institucional da Fatec; </li>
+                                <li> <i class="bx bxs-square">  </i> Sua senha. </li>
                             
-                            </table>
+                            </ul>
 
                             <p>
 
@@ -150,19 +142,15 @@
                             
                             </p>
 
-                            <table>
-                                
-                                <tbody>
+                            <ul>
 
-                                    <tr> <td> Sala que está sendo requisitada (Preenchido automaticamente.); </td> </tr>
-                                    <tr> <td> Dia de utilização desejado; </td> </tr>
-                                    <tr> <td> Hora inicial da utilização da sala; </td> </tr>
-                                    <tr> <td> Hora final da utilização da sala; </td> </tr>
-                                    <tr> <td> Quem deve confirmar esta requisição de utilização de sala. </td> </tr>
-
-                                </tbody>
+                                <li> <i class="bx bxs-square">  </i> Sala que está sendo requisitada (Preenchido automaticamente.); </li>
+                                <li> <i class="bx bxs-square">  </i> Dia de utilização desejado; </li>
+                                <li> <i class="bx bxs-square">  </i> Hora inicial da utilização da sala; </li>
+                                <li> <i class="bx bxs-square">  </i> Hora final da utilização da sala; </li>
+                                <li> <i class="bx bxs-square">  </i> Quem deve confirmar esta requisição de utilização de sala. </li>
                             
-                            </table>
+                            </ul>
 
                             <p>
 

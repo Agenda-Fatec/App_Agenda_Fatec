@@ -76,7 +76,7 @@ CREATE TABLE Agendamento (
     data_utilizacao DATE NOT NULL,
     hora_inicio_utilizacao TIME NOT NULL,
     hora_fim_utilizacao TIME NOT NULL,
-    situacao ENUM("Pendente", "Aprovado", "Recusado") NOT NULL DEFAULT "Pendente",
+    situacao ENUM("Pendente", "Aprovado", "Negado") NOT NULL DEFAULT "Pendente",
 
     fk_sala INT NOT NULL,
     CONSTRAINT fk_sala_agendamento FOREIGN KEY(fk_sala) REFERENCES Sala(id),

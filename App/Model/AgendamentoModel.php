@@ -75,6 +75,13 @@
 
         }
 
+        public function Confirm(int $id, string $situacao) : void
+        {
+
+            (new AgendamentoDAO())->Confirm($id, $situacao);
+
+        }
+
     }
 
 ?>
