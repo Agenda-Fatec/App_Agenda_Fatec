@@ -39,9 +39,19 @@
 
             $model->nome = $_POST["nome"];
 
-            $model->Save();
+            if(!$model->Save())
+            {
 
-            header("Location: " . ROUTES . "/cargo/listagem");
+                header("Location: " . ROUTES . "/cargo/listagem");
+
+            }
+
+            else
+            {
+
+                parent::Alert("Já existe um cargo de usuário cadastrado com este nome! Troque-o e tente novamente.", "/cargo/listagem");
+
+            }
 
         }
 

@@ -56,9 +56,19 @@
 
                 $model->fk_cargo = (int) $_POST["fk_cargo"];
 
-                $model->Save();
+                if(!$model->Save())
+                {
 
-                header("Location: " . ROUTES . "/");
+                    header("Location: " . ROUTES . "/");
+
+                }
+
+                else
+                {
+
+                    parent::Alert("Já existe um usuário cadastrado com este e-mail! Troque-o e tente novamente.", "/");
+
+                }
                 
             }
 
@@ -68,6 +78,34 @@
                 parent::Alert("Senhas não correspondentes! Faça as alterações necessárias e tente novamente.", "/cadastro");
 
             }
+
+        }
+
+        public static function Toggle() : void
+        {
+
+            $model = new UsuarioModel();
+
+            $id = (int) $_GET["id"];
+
+            ((bool) $_GET["ativo"]) ? $model->Remove($id) : $model->Add($id);
+
+            header("Location: " . ROUTES . "/usuario/listagem");
+
+        }
+
+        public static function List() : void
+        {
+
+            $model = new UsuarioModel();
+
+            $model->List();
+
+            $cargos = new CargoModel();
+
+            $cargos->List();
+
+            parent::Render("Usuario/Listagem", array($model->data, $cargos->data));
 
         }
 
@@ -115,19 +153,6 @@
 
         }
 
-        public static function Toggle() : void
-        {
-
-            $model = new UsuarioModel();
-
-            $id = (int) $_GET["id"];
-
-            ((bool) $_GET["ativo"]) ? $model->Remove($id) : $model->Add($id);
-
-            header("Location: " . ROUTES . "/usuario/listagem");
-
-        }
-
         public static function Reclassify() : void
         {
 
@@ -138,21 +163,6 @@
             ((bool) $_GET["administrador"]) ? $model->Reclassify($id, 0) : $model->Reclassify($id, 1);
 
             header("Location: " . ROUTES . "/usuario/listagem");
-
-        }
-
-        public static function List() : void
-        {
-
-            $model = new UsuarioModel();
-
-            $model->List();
-
-            $cargos = new CargoModel();
-
-            $cargos->List();
-
-            parent::Render("Usuario/Listagem", array($model->data, $cargos->data));
 
         }
 

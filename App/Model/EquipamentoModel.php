@@ -27,12 +27,35 @@
             
         }
 
-        public function Save() : void
+        public function Save() : bool
         {
 
             $dao = new EquipamentoDAO();
 
-            ($this->id === 0) ? $dao->Insert($this) : $dao->Update($this);
+            $valor_duplicado = false;
+
+            foreach($dao->FindRepetition($this->nome) as $equipamento)
+            {
+
+                if($equipamento->id !== $this->id && $equipamento->nome === $this->nome)
+                {
+
+                    $valor_duplicado = true;
+
+                    break;
+
+                }
+
+            }
+
+            if(!$valor_duplicado)
+            {
+
+                ($this->id === 0) ? $dao->Insert($this) : $dao->Update($this);
+
+            }
+
+            return $valor_duplicado;
 
         }
 

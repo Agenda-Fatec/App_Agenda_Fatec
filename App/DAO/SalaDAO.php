@@ -108,6 +108,23 @@
 
         }
 
+        public function FindRepetition(string $nome, int $numero) : array
+        {
+
+            $sql = "SELECT * FROM Sala WHERE nome = ? OR numero = ?";
+
+            $stmt = $this->connection->prepare($sql);
+
+            $stmt->bindValue(1, $nome);
+
+            $stmt->bindValue(2, $numero);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(DAO::FETCH_CLASS, "App\Model\SalaModel");
+
+        }
+
     }
 
 ?>
