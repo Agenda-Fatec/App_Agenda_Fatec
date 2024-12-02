@@ -19,6 +19,14 @@
                 
                     <summary> Administração </summary>
 
+                    <details class="module">
+
+                        <summary> Agendamentos </summary>
+
+                        <a href="<?= ROUTES ?>/agendamento/listagem"> Requisições </a>
+
+                    </details>
+
                     <?php $modules = ["Bloco", "Cargo", "Equipamento", "Sala"];
 
                           foreach($modules as $module): ?>

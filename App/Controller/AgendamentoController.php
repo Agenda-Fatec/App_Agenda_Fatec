@@ -84,7 +84,7 @@
 
             $model->Save();
 
-            header("Location: /salas");
+            header("Location: " . ROUTES . "/salas");
 
         }
 
@@ -105,7 +105,36 @@
             else
             {
 
-                parent::Render("Agendamento/Listagem", $model->data);
+                $usuarios = new UsuarioModel();
+
+                $usuarios->List();
+
+                $salas = new SalaModel();
+
+                $salas->List();
+
+                parent::Render("Agendamento/Listagem", array($model->data, $usuarios->data, $salas->data));
+
+            }
+
+        }
+
+        public static function Confirm() : void
+        {
+
+            if((bool) $_SESSION["usuario"]["administrador"])
+            {
+
+                (new AgendamentoModel())->Confirm((int) $_GET["id"], $_GET["situacao"]);
+
+                header("Location: " . ROUTES . "/agendamento/listagem");
+
+            }
+
+            else
+            {
+
+                parent::Alert("Ação negada àqueles que não são administradores!", "/");
 
             }
 

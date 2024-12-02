@@ -92,6 +92,21 @@
 
         }
 
+        public function Confirm(int $id, string $situacao) : void
+        {
+
+            $sql = "UPDATE Agendamento SET situacao = ? WHERE id = ?";
+
+            $stmt = $this->connection->prepare($sql);
+
+            $stmt->bindValue(1, $situacao);
+
+            $stmt->bindValue(2, $id);
+
+            $stmt->execute();
+
+        }
+
     }
 
 ?>

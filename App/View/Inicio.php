@@ -81,11 +81,9 @@
                             
                             Veja os conteúdos relacionados ao <span class="emphasis">Agenda Fatec</span> ou contate a 
                             <span class="emphasis">Fatec Jahu</span>.
+                            <br><br>
+                            Alguma dúvida? <a href="/ajuda">Clique aqui</a>.
                         
-                        </p>
-
-                        <p>
-                            <a style="text-decoration: none; color:var(--main-color);" href="/ajuda">Clique aqui</a> para consultar a tela de ajuda.
                         </p>
 
                         <div id="links">

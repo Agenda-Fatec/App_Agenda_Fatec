@@ -81,6 +81,10 @@
                         AgendamentoController::List();
                     break;
 
+                    case "/agendamento/confirmar":
+                        AgendamentoController::Confirm();
+                    break;
+
                     case "/bloco":
                         BlocoController::Form();
                     break;

@@ -83,19 +83,27 @@
 
 }
 
-#help #tutorial .tutorial-step table {
+#help #tutorial .tutorial-step ul {
 
-    border-spacing: 10px;
-    
+    max-width: 100%;
+    list-style: none;
+
 }
 
-#help #tutorial .tutorial-step table tbody td {
+#help #tutorial .tutorial-step ul li {
 
-    border: 1px solid var(--neutral-color);
+    /* border: 1px solid var(--neutral-color); */
     font-size: 20px;
     text-align: center;
     padding: 10px;
     
+}
+
+#help #tutorial .tutorial-step ul li i {
+
+    font-size: 15px;
+    color: var(--contrast-color);
+
 }
 
 #help #tutorial .tutorial-step figure {
