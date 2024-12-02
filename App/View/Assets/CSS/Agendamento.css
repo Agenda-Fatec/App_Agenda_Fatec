@@ -149,3 +149,15 @@
     color: var(--page-color);
 
 }
+
+/* Responsiveness: */
+
+@media (max-width: 767px) {
+
+    #scheduling form div:nth-child(7) {
+
+        flex-direction: column;
+        
+    }
+
+}
