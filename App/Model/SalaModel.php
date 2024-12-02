@@ -33,12 +33,40 @@
             
         }
 
-        public function Save() : void
+        public function Save() : bool
         {
 
             $dao = new SalaDAO();
 
-            ($this->id === 0) ? $dao->Insert($this) : $dao->Update($this);
+            $valor_duplicado = false;
+
+            foreach($dao->FindRepetition($this->nome, $this->numero) as $sala)
+            {
+
+                if($sala->id !== $this->id)
+                {
+
+                    if($sala->nome === $this->nome || $sala->numero === $this->numero)
+                    {
+
+                        $valor_duplicado = true;
+
+                        break;
+
+                    }
+
+                }
+
+            }
+
+            if(!$valor_duplicado)
+            {
+
+                ($this->id === 0) ? $dao->Insert($this) : $dao->Update($this);
+
+            }
+
+            return $valor_duplicado;
 
         }
 

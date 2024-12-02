@@ -42,9 +42,7 @@
 
                                 <th> Dia Especificado </th>
 
-                                <th> Hora Inicial </th>
-
-                                <th> Hora Final </th>
+                                <th> Período </th>
 
                                 <th colspan="2"> Situação </th>
 
@@ -66,9 +64,7 @@
 
                                         <td> <?= $agendamento->data_utilizacao ?> </td>
 
-                                        <td> <?= $agendamento->hora_inicio_utilizacao ?> </td>
-
-                                        <td> <?= $agendamento->hora_fim_utilizacao ?> </td>
+                                        <td> <?= "Das " . $agendamento->hora_inicio_utilizacao . " às " . $agendamento->hora_fim_utilizacao ?> </td>
 
                                         <?php if($agendamento->situacao === "Pendente"): ?>
 

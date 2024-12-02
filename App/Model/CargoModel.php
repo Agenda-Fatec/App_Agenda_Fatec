@@ -25,12 +25,35 @@
             
         }
 
-        public function Save() : void
+        public function Save() : bool
         {
 
             $dao = new CargoDAO();
 
-            ($this->id === 0) ? $dao->Insert($this) : $dao->Update($this);
+            $valor_duplicado = false;
+
+            foreach($dao->FindRepetition($this->nome) as $cargo)
+            {
+
+                if($cargo->id !== $this->id && $cargo->nome === $this->nome)
+                {
+
+                    $valor_duplicado = true;
+
+                    break;
+
+                }
+
+            }
+
+            if(!$valor_duplicado)
+            {
+
+                ($this->id === 0) ? $dao->Insert($this) : $dao->Update($this);
+
+            }
+
+            return $valor_duplicado;
 
         }
 

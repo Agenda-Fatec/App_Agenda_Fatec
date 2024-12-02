@@ -30,6 +30,8 @@
 
                     <h1> Listagem de Salas </h1>
 
+                    <a id="new-register" href="<?= ROUTES ?>/sala">  Adicionar </a>
+
                     <table>
                         
                         <thead>

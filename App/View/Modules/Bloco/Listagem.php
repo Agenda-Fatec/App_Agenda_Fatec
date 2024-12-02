@@ -30,6 +30,8 @@
 
                     <h1> Listagem de Blocos </h1>
 
+                    <a id="new-register" href="<?= ROUTES ?>/bloco">  Adicionar </a>
+
                     <table>
                         
                         <thead>

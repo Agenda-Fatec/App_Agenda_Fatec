@@ -41,9 +41,19 @@
 
             $model->descricao = $_POST["descricao"];
 
-            $model->Save();
+            if(!$model->Save())
+            {
 
-            header("Location: " . ROUTES . "/equipamento/listagem");
+                header("Location: " . ROUTES . "/equipamento/listagem");
+
+            }
+
+            else
+            {
+
+                parent::Alert("Já existe um equipamento cadastrado com este nome! Troque-o e tente novamente.", "/equipamento/listagem");
+
+            }
 
         }
 

@@ -33,23 +33,6 @@
 
         }
 
-        public function Login(UsuarioModel $model) : object | false
-        {
-
-            $sql = "SELECT * FROM Usuario WHERE email = ? AND senha = MD5(?) AND ativo = true";
-
-            $stmt = $this->connection->prepare($sql);
-
-            $stmt->bindValue(1, $model->email);
-
-            $stmt->bindValue(2, $model->senha);
-
-            $stmt->execute();
-
-            return $stmt->fetchObject("App\Model\UsuarioModel");
-
-        }
-
         public function Update(UsuarioModel $model) : void
         {
 
@@ -97,21 +80,6 @@
 
         }
 
-        public function Reclassify(int $id, int $condition) : void
-        {
-
-            $sql = "UPDATE Usuario SET administrador = ? WHERE id = ?";
-
-            $stmt = $this->connection->prepare($sql);
-
-            $stmt->bindValue(1, $condition);
-
-            $stmt->bindValue(2, $id);
-
-            $stmt->execute();
-
-        }
-
         public function Select() : array
         {
 
@@ -137,6 +105,53 @@
             $stmt->execute();
 
             return $stmt->fetchObject("App\Model\UsuarioModel");
+
+        }
+
+        public function FindRepetition(string $email) : array
+        {
+
+            $sql = "SELECT * FROM Usuario WHERE email = ?";
+
+            $stmt = $this->connection->prepare($sql);
+
+            $stmt->bindValue(1, $email);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(DAO::FETCH_CLASS, "App\Model\UsuarioModel");
+
+        }
+
+        public function Login(UsuarioModel $model) : object | false
+        {
+
+            $sql = "SELECT * FROM Usuario WHERE email = ? AND senha = MD5(?) AND ativo = true";
+
+            $stmt = $this->connection->prepare($sql);
+
+            $stmt->bindValue(1, $model->email);
+
+            $stmt->bindValue(2, $model->senha);
+
+            $stmt->execute();
+
+            return $stmt->fetchObject("App\Model\UsuarioModel");
+
+        }
+
+        public function Reclassify(int $id, int $condition) : void
+        {
+
+            $sql = "UPDATE Usuario SET administrador = ? WHERE id = ?";
+
+            $stmt = $this->connection->prepare($sql);
+
+            $stmt->bindValue(1, $condition);
+
+            $stmt->bindValue(2, $id);
+
+            $stmt->execute();
 
         }
 
