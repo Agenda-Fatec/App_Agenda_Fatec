@@ -43,7 +43,7 @@
             foreach($dao->FindRepetition($this->email) as $usuario)
             {
 
-                if($usuario->id !== $this->id && $usuario->nome === $this->email)
+                if($usuario->id !== $this->id && $usuario->email === $this->email)
                 {
 
                     $valor_duplicado = true;
